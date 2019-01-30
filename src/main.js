@@ -130,6 +130,7 @@ function blamepressed()
     let solution = document.getElementById("solution");
     solution.style.display = "none";
 
+    currentWord=0;
     starttest();
 }
 
