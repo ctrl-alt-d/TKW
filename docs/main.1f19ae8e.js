@@ -649,7 +649,7 @@ starttest();
 document.getElementById("share").onclick = function () {
   console.log('ok :', "ok");
   (0, _vanillaSharing.fbButton)({
-    url: ' https://ctrl-alt-d.github.io/TKW/'
+    url: 'https://ctrl-alt-d.github.io/TKW/'
   });
 };
 },{"./questions":"questions.js","vanilla-sharing":"../node_modules/vanilla-sharing/dist/vanilla-sharing.esm.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -679,7 +679,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42965" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42859" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
