@@ -140,7 +140,7 @@ document.getElementById("share").onclick= () =>
 { 
     console.log('ok :', "ok");
     fbButton({
-        url: ' https://ctrl-alt-d.github.io/TKW/',
+        url: 'https://ctrl-alt-d.github.io/TKW/',
     });
 }
 
