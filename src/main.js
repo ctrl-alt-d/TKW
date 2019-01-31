@@ -13,6 +13,7 @@ let score = 0;
 let level = 0;
 let MyQ = [];
 let levelsNames = ["Noob","Middle","Pro"];
+let pictureovervideo = true;
 
 function initialize()
 {
@@ -90,7 +91,7 @@ function starttest() {
     let haspicture = currentItem.picture != "";
     let hasboth = hasvideo && haspicture;
     
-    if (haspicture)
+    if ( (haspicture && !hasvideo) || (hasboth && pictureovervideo) )
     {
         //picture
         [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="none" );
@@ -171,6 +172,9 @@ function setlevel(l)
     domscore.innerText = "TKW Test " + levelsNames[level] + " ";
 
 
+    //
+    pictureovervideo = document.getElementById("video-picture-picture").checked;
+    
     $("#modal-level").modal("toggle");
     starttest();
 }
@@ -179,7 +183,6 @@ initialize();
 
 document.getElementById("share").onclick= () =>
 { 
-    console.log('ok :', "ok");
     fbButton({
         url: 'https://ctrl-alt-d.github.io/TKW/',
     });

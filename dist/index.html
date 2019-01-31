@@ -102,7 +102,17 @@
                             <h5 class="modal-title">Are you pro?</h5>
                         </div>
                         <div class="modal-body">
-                                <div class="btn-group w-100" role="group" aria-label="level">
+                                <div class="row justify-content-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="video-picture" id="video-picture-picture" value="picture" checked="">
+                                        <label class="form-check-label" for="video-picture-picture">Pictures</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="video-picture" id="video-picture-video" value="video">
+                                        <label class="form-check-label" for="video-picture-video">Video</label>
+                                    </div>
+                                </div>
+                                <div class="btn-group w-100 mt-4" role="group" aria-label="level">
                                     <button id="level-0" type="button" class="btn btn-outline-dark" data-dismiss="modal">Noob</button>
                                     <button id="level-1" type="button" class="btn btn-outline-dark" data-dismiss="modal">Middle</button>
                                     <button id="level-2" type="button" class="btn btn-outline-dark" data-dismiss="modal">Pro</button>

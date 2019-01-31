@@ -820,6 +820,7 @@ var score = 0;
 var level = 0;
 var MyQ = [];
 var levelsNames = ["Noob", "Middle", "Pro"];
+var pictureovervideo = true;
 
 function initialize() {
   var _loop = function _loop(i) {
@@ -908,7 +909,7 @@ function starttest() {
   var haspicture = currentItem.picture != "";
   var hasboth = hasvideo && haspicture;
 
-  if (haspicture) {
+  if (haspicture && !hasvideo || hasboth && pictureovervideo) {
     //picture
     [].forEach.call(document.getElementsByClassName("play-video"), function (x) {
       return x.style.display = "none";
@@ -976,7 +977,9 @@ function setlevel(l) {
   if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]); //
 
   var domscore = document.getElementById("score");
-  domscore.innerText = "TKW Test " + levelsNames[level] + " ";
+  domscore.innerText = "TKW Test " + levelsNames[level] + " "; //
+
+  pictureovervideo = document.getElementById("video-picture-picture").checked;
   $("#modal-level").modal("toggle");
   starttest();
 }
@@ -984,7 +987,6 @@ function setlevel(l) {
 initialize();
 
 document.getElementById("share").onclick = function () {
-  console.log('ok :', "ok");
   (0, _vanillaSharing.fbButton)({
     url: 'https://ctrl-alt-d.github.io/TKW/'
   });
@@ -1016,7 +1018,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40623" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33785" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
