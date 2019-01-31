@@ -108,7 +108,7 @@ function testpressed()
     score += correct ? 1 : -1;
 
     let domscore = document.getElementById("score");
-    domscore.innerText = "TKW (" + levelsNames[level] + ") Test. Score: " + score + ;
+    domscore.innerText = "TKW (" + levelsNames[level] + ") Test. Score: " + score ;
     
     showreview(correct);
 
