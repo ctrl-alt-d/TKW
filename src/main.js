@@ -1,6 +1,9 @@
 import Q from "./questions";
 import { fbButton } from 'vanilla-sharing';
 
+const images = require('./assets/*.png');
+
+
 let alltecniques = [];
 let currentWord = 0;
 let currentAnswer = "";
@@ -83,10 +86,25 @@ function starttest() {
     //get item
     currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
 
-    //video
-    let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&&loop=1".replace("XXXXX", currentItem.video);
-    let domVideo = document.getElementById("video");
-    domVideo.setAttribute("src", videourl);
+    let hasvideo = currentItem.video != "";
+    let haspicture = currentItem.picture != "";
+    let hasboth = hasvideo && haspicture;
+    
+    if (haspicture)
+    {
+        //picture
+        [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="none" );
+        document.getElementById("picture-div").style.display="";
+        let domPicture = document.getElementById("picture");
+        domPicture.setAttribute("src", images[currentItem.picture]);
+    } else {
+        //video
+        document.getElementById("picture-div").style.display="none";
+        [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
+        let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&&loop=1".replace("XXXXX", currentItem.video);
+        let domVideo = document.getElementById("video");
+        domVideo.setAttribute("src", videourl);
+    }
 
     choseOptions();
 
@@ -108,7 +126,7 @@ function testpressed()
     score += correct ? 1 : -1;
 
     let domscore = document.getElementById("score");
-    domscore.innerText = "TKW (" + levelsNames[level] + ") Test. Score: " + score ;
+    domscore.innerText = "TKW (" + levelsNames[level] + ") " + score ;
     
     showreview(correct);
 
