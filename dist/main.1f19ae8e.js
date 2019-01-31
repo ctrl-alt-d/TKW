@@ -111,47 +111,57 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var Q = [// maki defensas
+var Q = [// makki defensas
 {
+  "level": 0,
   "tecnica": "Olgul makki",
   "video": "Ns0L-K-8EpU",
   "alt": ""
 }, {
+  "level": 0,
   "tecnica": "Montong makki",
   "video": "zWenAK-MXos",
   "alt": ""
 }, {
+  "level": 2,
   "tecnica": "PALKUT MONTONG PIOCHO CHIGUI",
   "video": "gwaUWWeC1AM",
   "alt": ""
 }, // movimientos pum (especiales)
 {
+  "level": 0,
   "tecnica": "Kibon chumbi seogi",
   "video": "is_z4kJU6nA",
   "alt": "Kibon chumbi seogi"
 }, {
+  "level": 2,
   "tecnica": "chebipum mok chigui",
   "video": "YQvbWkYt5II",
   "alt": ""
 }, {
+  "level": 2,
   "tecnica": "montong piochok palkup chigi",
   "video": "gwaUWWeC1AM",
   "alt": "PALKUT MONTONG PIOCHOk CHIGUI"
 }, {
-  "tecnica": "bituro jansonnal olgul backat maki",
+  "level": 2,
+  "tecnica": "bituro jansonnal olgul backat makki",
   "video": "WejuWi4ALHs",
   "alt": ""
 }, //{ "tecnica": "bochumok chumbi", "video": "", "alt": ""},
 {
-  "tecnica": "gawi maki",
+  "level": 2,
+  "tecnica": "gawi makki",
   "video": "OGMiZj_VDRw",
   "alt": ""
 }, //{ "tecnica": "dangkiok ollyo murop chigui", "video": "", "alt": ""},
 {
-  "tecnica": "oe santul maki",
+  "level": 2,
+  "tecnica": "oe santul makki",
   "video": "zjz1XceSfl0",
   "alt": ""
 }, {
+  "level": 2,
   "tecnica": "dangkiok tok jirugui",
   "video": "So60sYvI840",
   "alt": ""
@@ -560,18 +570,11 @@ var currentAnswer = "";
 var currentItem = null;
 var currentOptions = [];
 var score = 0;
+var level = 0;
+var MyQ = [];
+var levelsNames = ["Noob", "Middle", "Pro"];
 
 function initialize() {
-  //tots els noms a majúscules amb un sol espai
-  _questions.default.forEach(function (x) {
-    return x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ");
-  }); //getletalltecniques
-
-
-  alltecniques = [].concat.apply([], _questions.default.map(function (x) {
-    return x.tecnica.split(" ");
-  })); //options events
-
   var _loop = function _loop(i) {
     var option = document.getElementById("a" + i);
 
@@ -580,6 +583,7 @@ function initialize() {
     };
   };
 
+  //options events
   for (var i = 0; i < 5; i++) {
     _loop(i);
   } //test event
@@ -602,7 +606,22 @@ function initialize() {
 
   kobbton.onclick = function () {
     return reviewpressed();
+  }; //levels
+
+
+  var _loop2 = function _loop2(i) {
+    var domlevel = document.getElementById("level-" + i);
+
+    domlevel.onclick = function () {
+      return setlevel(i);
+    };
   };
+
+  for (var i = 0; i < 3; i++) {
+    _loop2(i);
+  }
+
+  $("#modal-level").modal("show");
 }
 
 function choseOptions() {
@@ -637,7 +656,7 @@ function starttest() {
   var myanswer = document.getElementById("my-answer");
   myanswer.textContent = ""; //get item
 
-  currentItem = _questions.default[Math.floor(Math.random() * _questions.default.length)]; //video
+  currentItem = MyQ[Math.floor(Math.random() * MyQ.length)]; //video
 
   var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&&loop=1".replace("XXXXX", currentItem.video);
   var domVideo = document.getElementById("video");
@@ -657,7 +676,7 @@ function testpressed() {
   var correct = myanswer.textContent == currentItem.tecnica;
   score += correct ? 1 : -1;
   var domscore = document.getElementById("score");
-  domscore.innerText = "TKW Test. Score: " + score;
+  domscore.innerText = "TKW Test. Score: " + score + " (" + levelsNames[level] + ") ";
   showreview(correct);
 }
 
@@ -674,8 +693,28 @@ function reviewpressed() {
   starttest();
 }
 
+function setlevel(l) {
+  level = l;
+  MyQ = _questions.default.filter(function (x) {
+    return x.level <= level;
+  }); //tots els noms a majúscules amb un sol espai
+
+  MyQ.forEach(function (x) {
+    return x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ");
+  }); //getletalltecniques
+
+  alltecniques = [].concat.apply([], MyQ.map(function (x) {
+    return x.tecnica.split(" ");
+  }));
+  if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]); //
+
+  var domscore = document.getElementById("score");
+  domscore.innerText = "TKW Test " + levelsNames[level] + " ";
+  $("#modal-level").modal("toggle");
+  starttest();
+}
+
 initialize();
-starttest();
 
 document.getElementById("share").onclick = function () {
   console.log('ok :', "ok");
@@ -710,7 +749,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38649" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34231" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

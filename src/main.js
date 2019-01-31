@@ -7,14 +7,12 @@ let currentAnswer = "";
 let currentItem = null;
 let currentOptions = [];
 let score = 0;
+let level = 0;
+let MyQ = [];
+let levelsNames = ["Noob","Middle","Pro"];
 
 function initialize()
 {
-    //tots els noms a majúscules amb un sol espai
-    Q.forEach( x=> x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ") );
-
-    //getletalltecniques
-    alltecniques=[].concat.apply([], Q.map(x=>x.tecnica.split(" ")) );
 
     //options events
     for (let i=0;i<5;i++)
@@ -32,6 +30,16 @@ function initialize()
     okbbton.onclick = ()=>reviewpressed();
     let kobbton = document.getElementById("ko-button");
     kobbton.onclick = ()=>reviewpressed();
+
+    //levels
+    for (let i=0; i<3; i++)
+    {
+        let domlevel = document.getElementById("level-"+i);
+        domlevel.onclick = ()=>setlevel(i);
+    }
+    
+    $("#modal-level").modal("show");             
+
 }
 
 function choseOptions()
@@ -73,7 +81,7 @@ function starttest() {
     myanswer.textContent = "";
 
     //get item
-    currentItem = Q[Math.floor(Math.random() * Q.length)];
+    currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
 
     //video
     let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&&loop=1".replace("XXXXX", currentItem.video);
@@ -100,7 +108,7 @@ function testpressed()
     score += correct ? 1 : -1;
 
     let domscore = document.getElementById("score");
-    domscore.innerText = "TKW Test. Score: " + score;
+    domscore.innerText = "TKW (" + levelsNames[level] + ") Test. Score: " + score + ;
     
     showreview(correct);
 
@@ -125,8 +133,29 @@ function reviewpressed()
     starttest();
 }
 
+function setlevel(l)
+{
+    level = l;
+
+    MyQ = Q.filter(x=>x.level <= level);
+    
+    //tots els noms a majúscules amb un sol espai
+    MyQ.forEach( x=> x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ") );
+
+    //getletalltecniques
+    alltecniques=[].concat.apply([], MyQ.map(x=>x.tecnica.split(" ")) );
+    if (alltecniques.length<5) alltecniques = alltecniques.concat([" - "," :) "," :( ", " kiap "]);
+
+    //
+    let domscore = document.getElementById("score");
+    domscore.innerText = "TKW Test " + levelsNames[level] + " ";
+
+
+    $("#modal-level").modal("toggle");
+    starttest();
+}
+
 initialize();
-starttest() ;
 
 document.getElementById("share").onclick= () =>
 { 
