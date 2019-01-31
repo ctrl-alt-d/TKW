@@ -137,7 +137,9 @@ function setlevel(l)
 {
     level = l;
 
-    MyQ = Q.filter(x=>x.level <= level);
+    MyQ = Q.filter(x=>x.level <= level && x.video != "" );
+
+    console.log('MyQ :', MyQ);
     
     //tots els noms a majúscules amb un sol espai
     MyQ.forEach( x=> x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ") );

@@ -111,11 +111,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var Q = [// makki defensas
+var Q = [// makki defenses
 {
   "level": 0,
-  "tecnica": "Olgul makki",
-  "video": "Ns0L-K-8EpU",
+  "tecnica": "Are Makki",
+  "video": "",
   "alt": ""
 }, {
   "level": 0,
@@ -123,9 +123,166 @@ var Q = [// makki defensas
   "video": "zWenAK-MXos",
   "alt": ""
 }, {
+  "level": 0,
+  "tecnica": "Montong an makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "Olgul makki",
+  "video": "Ns0L-K-8EpU",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "Montong bakat makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "sonnal montong maki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 1,
+  "tecnica": "jansonnal montong bakat maki",
+  "video": "",
+  "alt": ""
+}, {
   "level": 2,
-  "tecnica": "PALKUT MONTONG PIOCHO CHIGUI",
-  "video": "gwaUWWeC1AM",
+  "tecnica": "nulo maki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "olgul bakat maki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 2,
+  "tecnica": "gechio are maki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 2,
+  "tecnica": "batagson monton an makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 1,
+  "tecnica": "sonnal are makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 2,
+  "tecnica": "goduro batagson montong makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "gehio montong makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "okgoro are makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "jansonnal montong yop makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "goduro montong makki",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "goduro are makki",
+  "video": "",
+  "alt": ""
+}, // gong kiok, atacs
+{
+  "level": 0,
+  "tecnica": "Mongtong bande jirugui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "Mongtong baro jirugui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "ogul bande jirugui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "Dubong montong jirugui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "sonnal mok chigui",
+  "video": "",
+  "alt": "sonnal an chigui"
+}, {
+  "level": 0,
+  "tecnica": "pionson kut seuo chirugui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "dung chumok ape chigui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "me chumok ape chigui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "palkup dollio chigui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "du checho jirugui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "dung chumok bakat chigui",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "yop jirugui",
+  "video": "",
+  "alt": ""
+}, // soguis. posiciones
+{
+  "level": 0,
+  "tecnica": "",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "",
+  "video": "",
   "alt": ""
 }, // movimientos pum (especiales)
 {
@@ -148,14 +305,22 @@ var Q = [// makki defensas
   "tecnica": "bituro jansonnal olgul backat makki",
   "video": "WejuWi4ALHs",
   "alt": ""
-}, //{ "tecnica": "bochumok chumbi", "video": "", "alt": ""},
-{
+}, {
+  "level": 2,
+  "tecnica": "bochumok chumbi",
+  "video": "",
+  "alt": ""
+}, {
   "level": 2,
   "tecnica": "gawi makki",
   "video": "OGMiZj_VDRw",
   "alt": ""
-}, //{ "tecnica": "dangkiok ollyo murop chigui", "video": "", "alt": ""},
-{
+}, {
+  "level": 2,
+  "tecnica": "dangkiok ollyo murop chigui",
+  "video": "",
+  "alt": ""
+}, {
   "level": 2,
   "tecnica": "oe santul makki",
   "video": "zjz1XceSfl0",
@@ -164,6 +329,27 @@ var Q = [// makki defensas
   "level": 2,
   "tecnica": "dangkiok tok jirugui",
   "video": "So60sYvI840",
+  "alt": ""
+}, // Bal kisul 
+{
+  "level": 0,
+  "tecnica": "",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "",
+  "video": "",
+  "alt": ""
+}, {
+  "level": 0,
+  "tecnica": "",
+  "video": "",
   "alt": ""
 }];
 var _default = Q;
@@ -676,7 +862,7 @@ function testpressed() {
   var correct = myanswer.textContent == currentItem.tecnica;
   score += correct ? 1 : -1;
   var domscore = document.getElementById("score");
-  domscore.innerText = "TKW Test. Score: " + score + " (" + levelsNames[level] + ") ";
+  domscore.innerText = "TKW (" + levelsNames[level] + ") Test. Score: " + score;
   showreview(correct);
 }
 
@@ -696,8 +882,9 @@ function reviewpressed() {
 function setlevel(l) {
   level = l;
   MyQ = _questions.default.filter(function (x) {
-    return x.level <= level;
-  }); //tots els noms a majúscules amb un sol espai
+    return x.level <= level && x.video != "";
+  });
+  console.log('MyQ :', MyQ); //tots els noms a majúscules amb un sol espai
 
   MyQ.forEach(function (x) {
     return x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ");
@@ -749,7 +936,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34231" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34399" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
