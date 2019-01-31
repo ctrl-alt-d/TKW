@@ -39,7 +39,7 @@
                     <button id="a3" type="button" class="btn btn-primary w-100 mt-1"> ?  </button>
                     <button id="a4" type="button" class="btn btn-primary w-100 mt-1"> ?  </button>
                 </div>
-        
+
                 <div id="resposta" class="mt-4">
                     <div class="input-group input-group-lg mb-3">
                         <div class="input-group-prepend">
@@ -49,15 +49,45 @@
                     </div>        
                 </div>
 
-                <div id="solution" class="mt-4" style="display: none">
-                    <div class="input-group input-group-lg mb-3">
-                        <div class="input-group-prepend">
-                            <button id="blame" class="btn" type="button">NO!</button>
+                <!-- MODALS -->
+                <div class="modal fade" id="modal-ok" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Wow!!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <textarea id="the-answer" cols="40" rows="2" class="form-control" readonly="true"></textarea>
-                    </div>        
+                        <div class="modal-body">
+                            <h2 id="answer-ok"></h2>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="ko-button" type="button" class="btn btn-success" data-dismiss="modal">Good job +1</button>
+                        </div>
+                        </div>
+                    </div>
                 </div>
-    
+
+                <div class="modal fade" id="modal-ko" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Oooops!!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h2 id="answer-ko"></h2>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="ok-button" type="button" class="btn btn-danger" data-dismiss="modal">:(  -1</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 

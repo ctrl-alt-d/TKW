@@ -28,8 +28,10 @@ function initialize()
     test.onclick = ()=>testpressed();
 
     //
-    let blame = document.getElementById("blame");
-    blame.onclick = ()=>blamepressed();
+    let okbbton = document.getElementById("ok-button");
+    okbbton.onclick = ()=>reviewpressed();
+    let kobbton = document.getElementById("ko-button");
+    kobbton.onclick = ()=>reviewpressed();
 }
 
 function choseOptions()
@@ -94,42 +96,31 @@ function testpressed()
 {
     let myanswer = document.getElementById("my-answer");
     let correct = myanswer.textContent == currentItem.tecnica; 
+
     score += correct ? 1 : -1;
 
     let domscore = document.getElementById("score");
     domscore.innerText = "TKW Test. Score: " + score;
     
-    showwrong(correct);
+    showreview(correct);
 
 }
 
-function showwrong(correct)
+function showreview(correct)
 {
-    let domsolution = document.getElementById("resposta");
-    domsolution.style.display = "none";
 
-    let solution = document.getElementById("solution");
-    solution.style.display = "";
+    let answerok = document.getElementById("answer-ok");
+    answerok.textContent = currentItem.tecnica;
 
-    let theanswer = document.getElementById("the-answer");
-    theanswer.textContent = currentItem.tecnica
+    let answerko = document.getElementById("answer-ko");
+    answerko.textContent = currentItem.tecnica;
 
-    let domblame = document.getElementById("blame");
-    domblame.className = correct?"btn btn-outline-success":"btn btn-outline-danger";
-    domblame.innerText = correct?":)":":(";
-
+    $(correct?"#modal-ok":"#modal-ko").modal("toggle");
 
 }
 
-function blamepressed()
+function reviewpressed()
 {
-
-    let domsolution = document.getElementById("resposta");
-    domsolution.style.display = "";
-
-    let solution = document.getElementById("solution");
-    solution.style.display = "none";
-
     currentWord=0;
     starttest();
 }

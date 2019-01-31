@@ -592,10 +592,16 @@ function initialize() {
   }; //
 
 
-  var blame = document.getElementById("blame");
+  var okbbton = document.getElementById("ok-button");
 
-  blame.onclick = function () {
-    return blamepressed();
+  okbbton.onclick = function () {
+    return reviewpressed();
+  };
+
+  var kobbton = document.getElementById("ko-button");
+
+  kobbton.onclick = function () {
+    return reviewpressed();
   };
 }
 
@@ -652,26 +658,18 @@ function testpressed() {
   score += correct ? 1 : -1;
   var domscore = document.getElementById("score");
   domscore.innerText = "TKW Test. Score: " + score;
-  showwrong(correct);
+  showreview(correct);
 }
 
-function showwrong(correct) {
-  var domsolution = document.getElementById("resposta");
-  domsolution.style.display = "none";
-  var solution = document.getElementById("solution");
-  solution.style.display = "";
-  var theanswer = document.getElementById("the-answer");
-  theanswer.textContent = currentItem.tecnica;
-  var domblame = document.getElementById("blame");
-  domblame.className = correct ? "btn btn-outline-success" : "btn btn-outline-danger";
-  domblame.innerText = correct ? ":)" : ":(";
+function showreview(correct) {
+  var answerok = document.getElementById("answer-ok");
+  answerok.textContent = currentItem.tecnica;
+  var answerko = document.getElementById("answer-ko");
+  answerko.textContent = currentItem.tecnica;
+  $(correct ? "#modal-ok" : "#modal-ko").modal("toggle");
 }
 
-function blamepressed() {
-  var domsolution = document.getElementById("resposta");
-  domsolution.style.display = "";
-  var solution = document.getElementById("solution");
-  solution.style.display = "none";
+function reviewpressed() {
   currentWord = 0;
   starttest();
 }
@@ -712,7 +710,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46433" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38649" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
