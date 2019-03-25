@@ -111,293 +111,330 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var Q = [// makki defenses
-{
+var Q = [{
   "level": 0,
   "tecnica": "Are Makki",
-  "video": "",
+  "video": "y3nUBMaMIgw",
   "alt": "",
   "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "Montong makki",
-  "video": "zWenAK-MXos",
+  "video": "5dpFzb5eges",
   "alt": "",
-  "picture": "montong-makki"
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "Montong an makki",
-  "video": "",
+  "video": "5fkuhw3ykeE",
   "alt": "",
-  "picture": "montong-an-makki"
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "Olgul makki",
-  "video": "Ns0L-K-8EpU",
+  "video": "eLmvdSATImQ",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "Montong bakat makki",
-  "video": "",
+  "video": "FJHvYN50-K0",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "sonnal montong maki",
-  "video": "",
+  "video": "FJHvYN50-K0",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 1,
+  "level": 0,
   "tecnica": "jansonnal montong bakat maki",
-  "video": "",
+  "video": "vYhSC67r93o",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "nulo maki",
-  "video": "",
+  "video": "hWcDlF0r8DM",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "olgul bakat maki",
-  "video": "",
+  "video": "IuvzhF7rfKk",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "gechio are maki",
-  "video": "",
+  "video": "pmtJV1w_Q0",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "batagson monton an makki",
-  "video": "",
+  "video": "dYO7moC38vI",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 1,
+  "level": 0,
   "tecnica": "sonnal are makki",
-  "video": "",
+  "video": "V6WI_u9WPJA",
   "alt": "",
-  "picture": ""
-}, {
-  "level": 2,
-  "tecnica": "goduro batagson montong makki",
-  "video": "",
-  "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "gehio montong makki",
-  "video": "",
+  "video": "f0wssE3FkYQ",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "okgoro are makki",
-  "video": "",
+  "video": "mVd6rud9Wjc",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "jansonnal montong yop makki",
-  "video": "",
+  "video": "Lcs_rJEHvAw",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "goduro montong makki",
-  "video": "",
+  "video": "jDuPHXcKiXs",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "goduro are makki",
-  "video": "",
+  "video": "YjJmEHA62Ck",
   "alt": "",
-  "picture": ""
-}, // gong kiok, atacs
-{
+  "picture": "are-makki"
+}, {
   "level": 0,
   "tecnica": "Mongtong bande jirugui",
-  "video": "",
+  "video": "ArcCBvkyLA4",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "Mongtong baro jirugui",
-  "video": "",
+  "video": "zwvB31_dC_k",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "ogul bande jirugui",
-  "video": "",
+  "video": "Jpst_GappfM",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "Dubong montong jirugui",
-  "video": "",
+  "video": "FznywtUJlJ8",
   "alt": "",
-  "picture": ""
-}, {
-  "level": 0,
-  "tecnica": "sonnal mok chigui",
-  "video": "",
-  "alt": "sonnal an chigui",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "pionson kut seuo chirugui",
-  "video": "",
+  "video": "Mu6_Lui_ip4",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "dung chumok ape chigui",
-  "video": "",
+  "video": "l4KM6HRNB48",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "me chumok ape chigui",
   "video": "",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
-  "tecnica": "palkup dollio chigui",
-  "video": "",
+  "tecnica": "palkup dollyo chigui",
+  "video": "kenoYzX61zo",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "du checho jirugui",
-  "video": "",
+  "video": "aI-HSZCWGyc",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "dung chumok bakat chigui",
-  "video": "",
+  "video": "MW-Pfo0CDMI",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
   "tecnica": "yop jirugui",
-  "video": "",
+  "video": "gbsfs9E3NI0",
   "alt": "",
-  "picture": ""
-}, // soguis. posiciones
-{
-  "level": 0,
-  "tecnica": "",
-  "video": "",
-  "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
-  "tecnica": "",
-  "video": "",
-  "alt": "",
-  "picture": ""
-}, {
-  "level": 0,
-  "tecnica": "",
-  "video": "",
-  "alt": "",
-  "picture": ""
-}, {
-  "level": 0,
-  "tecnica": "",
-  "video": "",
-  "alt": "",
-  "picture": ""
-}, // movimientos pum (especiales)
-{
-  "level": 0,
-  "tecnica": "Kibon chumbi seogi",
-  "video": "is_z4kJU6nA",
-  "alt": "Kibon chumbi seogi",
-  "picture": ""
-}, {
-  "level": 2,
   "tecnica": "chebipum mok chigui",
-  "video": "YQvbWkYt5II",
+  "video": "_vaC0DUpohg",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "montong piochok palkup chigi",
-  "video": "gwaUWWeC1AM",
+  "video": "WUPBPPUYWT0",
   "alt": "PALKUT MONTONG PIOCHOk CHIGUI",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "bituro jansonnal olgul backat makki",
-  "video": "WejuWi4ALHs",
+  "video": "2ceqGSwbm8M",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "bochumok chumbi",
   "video": "",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "gawi makki",
-  "video": "OGMiZj_VDRw",
+  "video": "zjiPglLsdOY",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "dangkiok ollyo murop chigui",
-  "video": "",
+  "video": "4igah7sddqQ",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "oe santul makki",
-  "video": "zjz1XceSfl0",
+  "video": "c0sDiHSDg0w",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
-  "level": 2,
+  "level": 0,
   "tecnica": "dangkiok tok jirugui",
-  "video": "So60sYvI840",
+  "video": "ZbOd9D6RdYw",
   "alt": "",
-  "picture": ""
-}, // Bal kisul 
-{
-  "level": 0,
-  "tecnica": "",
-  "video": "",
-  "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
-  "tecnica": "",
-  "video": "",
+  "tecnica": "ap chagui",
+  "video": "G8KCx2g1nfs",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
-  "tecnica": "",
-  "video": "",
+  "tecnica": "dollyo chagui",
+  "video": "mY-lCnt12Ck",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
 }, {
   "level": 0,
-  "tecnica": "",
-  "video": "",
+  "tecnica": "yop chagui",
+  "video": "vHFKx2jRcCU",
   "alt": "",
-  "picture": ""
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "tuit chagui",
+  "video": "Jdgnmr9enu8",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "nakko chagui",
+  "video": "HaSC6PZzw0U",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "furio chagui",
+  "video": "3QRqe15zIKE",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "neryo chagui",
+  "video": "524tqlcNlJk",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "mom dollyo yop chagui",
+  "video": "zXnz75Wh308",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "mon dollyo tuit chagui",
+  "video": "XFsQVojlQ58",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "mom dollyo nakko chagui",
+  "video": "z_9Cv3DXcJU",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "mom dollyo furio chagui",
+  "video": "m0eF69SfcPY",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "bandal chagui",
+  "video": "YExkwhssI9k",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "tuio bandal chagui",
+  "video": "DxDCg_6v9rE",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "tuio ap chagui",
+  "video": "Z9rnJ15KKCU",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "bakat chagui",
+  "video": "5hEZJ_Y22e0",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "Tuio dollyo chagui",
+  "video": "DmnCfnC7qeM",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "Tuio tuit chagui",
+  "video": "C5rBfYD15p4",
+  "alt": "",
+  "picture": "are-makki"
+}, {
+  "level": 0,
+  "tecnica": "an chagui",
+  "video": "iO-Py_LDQYM",
+  "alt": "",
+  "picture": "are-makki"
 }];
 var _default = Q;
 exports.default = _default;
@@ -813,7 +850,7 @@ var images = require('./assets/*.png');
 
 var alltecniques = [];
 var currentWord = 0;
-var currentAnswer = "";
+var previousTechnique = "";
 var currentItem = null;
 var currentOptions = [];
 var score = 0;
@@ -904,7 +941,11 @@ function starttest() {
   var myanswer = document.getElementById("my-answer");
   myanswer.textContent = ""; //get item
 
-  currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
+  do {
+    currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
+  } while (currentItem.tecnica == previousTechnique);
+
+  previousTechnique = currentItem.tecnica;
   var hasvideo = currentItem.video != "";
   var haspicture = currentItem.picture != "";
   var hasboth = hasvideo && haspicture;
@@ -923,7 +964,7 @@ function starttest() {
     [].forEach.call(document.getElementsByClassName("play-video"), function (x) {
       return x.style.display = "";
     });
-    var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&&loop=1".replace("XXXXX", currentItem.video);
+    var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&loop=1".replace("XXXXX", currentItem.video);
     var domVideo = document.getElementById("video");
     domVideo.setAttribute("src", videourl);
   }
@@ -1018,7 +1059,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40621" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -813,7 +813,7 @@ var images = require('./assets/*.png');
 
 var alltecniques = [];
 var currentWord = 0;
-var currentAnswer = "";
+var previousTechnique = "";
 var currentItem = null;
 var currentOptions = [];
 var score = 0;
@@ -904,7 +904,11 @@ function starttest() {
   var myanswer = document.getElementById("my-answer");
   myanswer.textContent = ""; //get item
 
-  currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
+  do {
+    currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
+  } while (currentItem.tecnica == previousTechnique);
+
+  previousTechnique = currentItem.tecnica;
   var hasvideo = currentItem.video != "";
   var haspicture = currentItem.picture != "";
   var hasboth = hasvideo && haspicture;
@@ -1018,7 +1022,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33195" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38161" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

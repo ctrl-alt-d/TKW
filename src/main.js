@@ -6,7 +6,7 @@ const images = require('./assets/*.png');
 
 let alltecniques = [];
 let currentWord = 0;
-let currentAnswer = "";
+let previousTechnique = "";
 let currentItem = null;
 let currentOptions = [];
 let score = 0;
@@ -85,7 +85,10 @@ function starttest() {
     myanswer.textContent = "";
 
     //get item
-    currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
+    do {
+        currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
+    } while (currentItem.tecnica == previousTechnique);
+    previousTechnique = currentItem.tecnica;
 
     let hasvideo = currentItem.video != "";
     let haspicture = currentItem.picture != "";
@@ -102,7 +105,7 @@ function starttest() {
         //video
         document.getElementById("picture-div").style.display="none";
         [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
-        let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&&loop=1".replace("XXXXX", currentItem.video);
+        let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&loop=1".replace("XXXXX", currentItem.video);
         let domVideo = document.getElementById("video");
         domVideo.setAttribute("src", videourl);
     }
