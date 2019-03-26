@@ -964,7 +964,7 @@ function starttest() {
     [].forEach.call(document.getElementsByClassName("play-video"), function (x) {
       return x.style.display = "";
     });
-    var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&loop=1".replace("XXXXX", currentItem.video);
+    var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", currentItem.video).replace("XXXXX", currentItem.video);
     var domVideo = document.getElementById("video");
     domVideo.setAttribute("src", videourl);
   }
@@ -1059,7 +1059,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38373" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39651" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

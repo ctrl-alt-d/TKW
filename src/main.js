@@ -105,7 +105,7 @@ function starttest() {
         //video
         document.getElementById("picture-div").style.display="none";
         [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
-        let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&loop=1".replace("XXXXX", currentItem.video);
+        let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", currentItem.video).replace("XXXXX", currentItem.video);
         let domVideo = document.getElementById("video");
         domVideo.setAttribute("src", videourl);
     }
