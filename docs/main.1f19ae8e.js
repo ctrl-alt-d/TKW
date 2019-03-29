@@ -944,6 +944,8 @@ function line() {
 }
 },{}],"assets/are-makki.png":[function(require,module,exports) {
 module.exports = "/TKW/are-makki.c1e94bc1.png";
+},{}],"assets/gm.png":[function(require,module,exports) {
+module.exports = "/TKW/gm.6ef19f89.png";
 },{}],"assets/montong-an-makki.png":[function(require,module,exports) {
 module.exports = "/TKW/montong-an-makki.4cb6432c.png";
 },{}],"assets/montong-makki.png":[function(require,module,exports) {
@@ -951,10 +953,11 @@ module.exports = "/TKW/montong-makki.29057413.png";
 },{}],"assets/*.png":[function(require,module,exports) {
 module.exports = {
   "are-makki": require("./are-makki.png"),
+  "gm": require("./gm.png"),
   "montong-an-makki": require("./montong-an-makki.png"),
   "montong-makki": require("./montong-makki.png")
 };
-},{"./are-makki.png":"assets/are-makki.png","./montong-an-makki.png":"assets/montong-an-makki.png","./montong-makki.png":"assets/montong-makki.png"}],"main.js":[function(require,module,exports) {
+},{"./are-makki.png":"assets/are-makki.png","./gm.png":"assets/gm.png","./montong-an-makki.png":"assets/montong-an-makki.png","./montong-makki.png":"assets/montong-makki.png"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _questions = _interopRequireDefault(require("./questions"));
@@ -1090,6 +1093,7 @@ function testpressed() {
   var myanswer = document.getElementById("my-answer");
   var correct = myanswer.textContent == currentItem.tecnica;
   score += correct ? 1 : -1;
+  score = score < 0 ? 0 : score;
   var domscore = document.getElementById("score");
   domscore.innerText = "TKW (" + levelsNames[level] + ") " + score;
   showreview(correct);
@@ -1132,7 +1136,7 @@ function setlevel(l) {
   if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]); //
 
   var domscore = document.getElementById("score");
-  domscore.innerText = "TKW Test " + levelsNames[level] + " ";
+  domscore.innerText = "TKW Objectiu: " + levelsNames[level] + " ";
   $("#modal-level").modal("toggle");
   starttest();
 }
@@ -1171,7 +1175,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46247" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33537" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

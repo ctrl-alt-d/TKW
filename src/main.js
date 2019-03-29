@@ -116,6 +116,7 @@ function testpressed()
     let correct = myanswer.textContent == currentItem.tecnica; 
 
     score += correct ? 1 : -1;
+    score = score < 0 ? 0 : score;
 
     let domscore = document.getElementById("score");
     domscore.innerText = "TKW (" + levelsNames[level] + ") " + score ;
@@ -159,7 +160,7 @@ function setlevel(l)
 
     //
     let domscore = document.getElementById("score");
-    domscore.innerText = "TKW Test " + levelsNames[level] + " ";
+    domscore.innerText = "TKW Objectiu: " + levelsNames[level] + " ";
     
     $("#modal-level").modal("toggle");
     starttest();
