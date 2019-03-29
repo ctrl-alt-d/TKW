@@ -61,12 +61,22 @@ function choseOptions()
     while( currentOptions.length < 5);
 
     //sure word is in
+    let rightOptionTecnica = -1;
     if (currentWord < currentItem.tecnica.split(" ").length)
     {
         let rightWord = currentItem.tecnica.split(" ")[currentWord];
-        let rightOption = currentOptions.indexOf(rightWord);
-        if (rightOption == -1) rightOption = Math.floor(Math.random() * currentOptions.length);
-        currentOptions[rightOption] = rightWord;
+        rightOptionTecnica = currentOptions.indexOf(rightWord);
+        if (rightOptionTecnica == -1) rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
+        currentOptions[rightOptionTecnica] = rightWord;
+    }
+
+    //sure alt also present
+    if (currentWord < currentItem.alt.split(" ").filter(x=>x!="").length)
+    {
+        let rightWord = currentItem.alt.split(" ")[currentWord];
+        let rightOptionAlt = currentOptions.indexOf(rightWord);
+        if (rightOptionAlt == -1) do {rightOptionAlt = Math.floor(Math.random() * currentOptions.length)} while(rightOptionAlt !=rightOptionTecnica ) ;
+        currentOptions[rightOptionAlt] = rightWord;
     }
 
     //show
@@ -113,7 +123,8 @@ function answerpressed(i)
 function testpressed()
 {
     let myanswer = document.getElementById("my-answer");
-    let correct = myanswer.textContent == currentItem.tecnica; 
+    let correct = myanswer.textContent == currentItem.tecnica || 
+                  ( currentItem.alt != "" && myanswer.textContent == currentItem.alt ); 
 
     score += correct ? 1 : -1;
     score = score < 0 ? 0 : score;
@@ -153,6 +164,7 @@ function setlevel(l)
     
     //tots els noms a majúscules amb un sol espai
     MyQ.forEach( x=> x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ") );
+    MyQ.forEach( x=> x.alt = x.alt.toUpperCase().split(" ").join(" ") );
 
     //getletalltecniques
     alltecniques=[].concat.apply([], MyQ.map(x=>x.tecnica.split(" ")) );

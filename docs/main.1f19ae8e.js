@@ -1047,11 +1047,25 @@ function choseOptions() {
   } while (currentOptions.length < 5); //sure word is in
 
 
+  var rightOptionTecnica = -1;
+
   if (currentWord < currentItem.tecnica.split(" ").length) {
     var rightWord = currentItem.tecnica.split(" ")[currentWord];
-    var rightOption = currentOptions.indexOf(rightWord);
-    if (rightOption == -1) rightOption = Math.floor(Math.random() * currentOptions.length);
-    currentOptions[rightOption] = rightWord;
+    rightOptionTecnica = currentOptions.indexOf(rightWord);
+    if (rightOptionTecnica == -1) rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
+    currentOptions[rightOptionTecnica] = rightWord;
+  } //sure alt also present
+
+
+  if (currentWord < currentItem.alt.split(" ").filter(function (x) {
+    return x != "";
+  }).length) {
+    var _rightWord = currentItem.alt.split(" ")[currentWord];
+    var rightOptionAlt = currentOptions.indexOf(_rightWord);
+    if (rightOptionAlt == -1) do {
+      rightOptionAlt = Math.floor(Math.random() * currentOptions.length);
+    } while (rightOptionAlt != rightOptionTecnica);
+    currentOptions[rightOptionAlt] = _rightWord;
   } //show
 
 
@@ -1091,7 +1105,7 @@ function answerpressed(i) {
 
 function testpressed() {
   var myanswer = document.getElementById("my-answer");
-  var correct = myanswer.textContent == currentItem.tecnica;
+  var correct = myanswer.textContent == currentItem.tecnica || currentItem.alt != "" && myanswer.textContent == currentItem.alt;
   score += correct ? 1 : -1;
   score = score < 0 ? 0 : score;
   var domscore = document.getElementById("score");
@@ -1128,6 +1142,9 @@ function setlevel(l) {
 
   MyQ.forEach(function (x) {
     return x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ");
+  });
+  MyQ.forEach(function (x) {
+    return x.alt = x.alt.toUpperCase().split(" ").join(" ");
   }); //getletalltecniques
 
   alltecniques = [].concat.apply([], MyQ.map(function (x) {
@@ -1175,7 +1192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33537" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44285" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
