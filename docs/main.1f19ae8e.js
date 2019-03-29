@@ -1109,7 +1109,7 @@ function testpressed() {
   score += correct ? 1 : -1;
   score = score < 0 ? 0 : score;
   var domscore = document.getElementById("score");
-  domscore.innerText = "TKW (" + levelsNames[level] + ") " + score;
+  domscore.innerText = "TKD (" + levelsNames[level] + ") " + score;
   showreview(correct);
 }
 
@@ -1153,7 +1153,7 @@ function setlevel(l) {
   if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]); //
 
   var domscore = document.getElementById("score");
-  domscore.innerText = "TKW Objectiu: " + levelsNames[level] + " ";
+  domscore.innerText = "TKD Objectiu: " + levelsNames[level] + " ";
   $("#modal-level").modal("toggle");
   starttest();
 }
@@ -1192,7 +1192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44285" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34901" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

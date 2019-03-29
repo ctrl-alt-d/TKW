@@ -130,7 +130,7 @@ function testpressed()
     score = score < 0 ? 0 : score;
 
     let domscore = document.getElementById("score");
-    domscore.innerText = "TKW (" + levelsNames[level] + ") " + score ;
+    domscore.innerText = "TKD (" + levelsNames[level] + ") " + score ;
     
     showreview(correct);
 
@@ -172,7 +172,7 @@ function setlevel(l)
 
     //
     let domscore = document.getElementById("score");
-    domscore.innerText = "TKW Objectiu: " + levelsNames[level] + " ";
+    domscore.innerText = "TKD Objectiu: " + levelsNames[level] + " ";
     
     $("#modal-level").modal("toggle");
     starttest();
