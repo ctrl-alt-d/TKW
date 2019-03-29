@@ -12,8 +12,7 @@ let currentOptions = [];
 let score = 0;
 let level = 0;
 let MyQ = [];
-let levelsNames = ["Noob","Middle","Pro"];
-let pictureovervideo = true;
+let levelsNames = ["Groc","Taronja","Verd","Blau","Marró","Negre"];
 
 function initialize()
 {
@@ -34,9 +33,11 @@ function initialize()
     okbbton.onclick = ()=>reviewpressed();
     let kobbton = document.getElementById("ko-button");
     kobbton.onclick = ()=>reviewpressed();
+    $('#modal-ok').on('hidden.bs.modal', ()=>reviewpressed() );
+    $('#modal-ko').on('hidden.bs.modal', ()=>reviewpressed() );
 
     //levels
-    for (let i=0; i<3; i++)
+    for (let i=0; i<6; i++)
     {
         let domlevel = document.getElementById("level-"+i);
         domlevel.onclick = ()=>setlevel(i);
@@ -89,26 +90,13 @@ function starttest() {
         currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
     } while (currentItem.tecnica == previousTechnique);
     previousTechnique = currentItem.tecnica;
-
-    let hasvideo = currentItem.video != "";
-    let haspicture = currentItem.picture != "";
-    let hasboth = hasvideo && haspicture;
     
-    if ( (haspicture && !hasvideo) || (hasboth && pictureovervideo) )
-    {
-        //picture
-        [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="none" );
-        document.getElementById("picture-div").style.display="";
-        let domPicture = document.getElementById("picture");
-        domPicture.setAttribute("src", images[currentItem.picture]);
-    } else {
-        //video
-        document.getElementById("picture-div").style.display="none";
-        [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
-        let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", currentItem.video).replace("XXXXX", currentItem.video);
-        let domVideo = document.getElementById("video");
-        domVideo.setAttribute("src", videourl);
-    }
+    //video
+    document.getElementById("picture-div").style.display="none";
+    [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
+    let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", currentItem.video).replace("XXXXX", currentItem.video);
+    let domVideo = document.getElementById("video");
+    domVideo.setAttribute("src", videourl);
 
     choseOptions();
 
@@ -158,10 +146,9 @@ function reviewpressed()
 function setlevel(l)
 {
     level = l;
+    let levelnumber = { "groc":0, "taronja": 1, "verd":2, "blau": 3, "marró":4, "negre": 5 };
 
-    MyQ = Q.filter(x=>x.level <= level && x.video != "" );
-
-    console.log('MyQ :', MyQ);
+    MyQ = Q.filter(x=>levelnumber[x.level] <= level );
     
     //tots els noms a majúscules amb un sol espai
     MyQ.forEach( x=> x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ") );
@@ -173,10 +160,6 @@ function setlevel(l)
     //
     let domscore = document.getElementById("score");
     domscore.innerText = "TKW Test " + levelsNames[level] + " ";
-
-
-    //
-    pictureovervideo = document.getElementById("video-picture-picture").checked;
     
     $("#modal-level").modal("toggle");
     starttest();
