@@ -150,7 +150,7 @@ var Q = [{
   "level": "verd",
   "negre": "si",
   "tecnica": "sonnal montong maki",
-  "video": "FJHvYN50-K0",
+  "video": "eb52M8MPbIM",
   "alt": "",
   "picture": "are-makki"
 }, {
@@ -1192,7 +1192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45175" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34901" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

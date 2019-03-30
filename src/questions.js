@@ -5,7 +5,7 @@ const Q = [
  { "level":"groc", "negre":"si", "tecnica":"Montong an maki", "video":"5fkuhw3ykeE", "alt": "", "picture": "are-makki" },
  { "level":"groc", "negre":"si", "tecnica":"Olgul maki", "video":"eLmvdSATImQ", "alt": "", "picture": "are-makki" },
  { "level":"verd", "negre":"si", "tecnica":"Montong bakat maki", "video":"FJHvYN50-K0", "alt": "", "picture": "are-makki" },
- { "level":"verd", "negre":"si", "tecnica":"sonnal montong maki", "video":"FJHvYN50-K0", "alt": "", "picture": "are-makki" },
+ { "level":"verd", "negre":"si", "tecnica":"sonnal montong maki", "video":"eb52M8MPbIM", "alt": "", "picture": "are-makki" },
  { "level":"verd", "negre":"si", "tecnica":"jansonnal montong bakat maki", "video":"vYhSC67r93o", "alt": "", "picture": "are-makki" },
  { "level":"verd", "negre":"si", "tecnica":"nulo maki", "video":"hWcDlF0r8DM", "alt": "", "picture": "are-makki" },
  { "level":"blau", "negre":"si", "tecnica":"olgul bakat maki", "video":"IuvzhF7rfKk", "alt": "", "picture": "are-makki" },
