@@ -268,9 +268,9 @@ var Q = [{
 }, {
   "level": "verd",
   "negre": "si",
-  "tecnica": "sonnal mok chigui",
+  "tecnica": "jansonnal mok chigui",
   "video": "GARSXnyJV0U",
-  "alt": "sonnal an chigui",
+  "alt": "jansonnal an chigui",
   "picture": "are-makki"
 }, {
   "level": "verd",
@@ -1220,7 +1220,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40371" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41131" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

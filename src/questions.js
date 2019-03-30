@@ -22,7 +22,7 @@ const Q = [
  { "level":"groc", "negre":"si", "tecnica":"Montong baro jirugui", "video":"zwvB31_dC_k", "alt": "", "picture": "are-makki" },
  { "level":"taronja", "negre":"si", "tecnica":"ogul bande jirugui", "video":"Jpst_GappfM", "alt": "", "picture": "are-makki" },
  { "level":"verd", "negre":"si", "tecnica":"Dubong montong jirugui", "video":"FznywtUJlJ8", "alt": "", "picture": "are-makki" },
- { "level":"verd", "negre":"si", "tecnica":"sonnal mok chigui", "video":"GARSXnyJV0U", "alt": "sonnal an chigui", "picture": "are-makki" },
+ { "level":"verd", "negre":"si", "tecnica":"jansonnal mok chigui", "video":"GARSXnyJV0U", "alt": "jansonnal an chigui", "picture": "are-makki" },
  { "level":"verd", "negre":"si", "tecnica":"pionson kut seuo chirugui", "video":"Mu6_Lui_ip4", "alt": "", "picture": "are-makki" },
  { "level":"verd", "negre":"si", "tecnica":"dung chumok ape chigui", "video":"l4KM6HRNB48", "alt": "", "picture": "are-makki" },
  { "level":"blau", "negre":"si", "tecnica":"palkup dollyo chigui", "video":"kenoYzX61zo", "alt": "", "picture": "are-makki" },
