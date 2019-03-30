@@ -1055,30 +1055,35 @@ function choseOptions() {
 
 
   var rightOptionTecnica = -1;
+  var rightWordTec = "";
 
   if (currentWord < currentItem.tecnica.split(" ").filter(function (x) {
     return x != "";
   }).length) {
-    var rightWord = currentItem.tecnica.split(" ").filter(function (x) {
+    rightWordTec = currentItem.tecnica.split(" ").filter(function (x) {
       return x != "";
     })[currentWord];
     rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
-    currentOptions[rightOptionTecnica] = rightWord;
+    currentOptions[rightOptionTecnica] = rightWordTec;
   } //insert alt word
 
 
   if (currentWord < currentItem.alt.split(" ").filter(function (x) {
     return x != "";
   }).length) {
-    var _rightWord = currentItem.alt.split(" ").filter(function (x) {
+    var rightWordAlt = currentItem.alt.split(" ").filter(function (x) {
       return x != "";
     })[currentWord];
 
-    do {
-      rightOptionAlt = Math.floor(Math.random() * currentOptions.length);
-    } while (rightOptionAlt != rightOptionTecnica);
+    if (rightWordAlt != rightWordTec) {
+      var rightOptionAlt = -1;
 
-    currentOptions[rightOptionAlt] = _rightWord;
+      do {
+        rightOptionAlt = Math.floor(Math.random() * currentOptions.length);
+      } while (rightOptionAlt == rightOptionTecnica);
+
+      currentOptions[rightOptionAlt] = rightWordAlt;
+    }
   } //show
 
 
@@ -1129,8 +1134,12 @@ function testpressed() {
 function showreview(correct) {
   var answerok = document.getElementById("answer-ok");
   answerok.textContent = currentItem.tecnica;
+  var answerokalt = document.getElementById("answer-ok-alt");
+  answerokalt.textContent = currentItem.alt;
   var answerko = document.getElementById("answer-ko");
   answerko.textContent = currentItem.tecnica;
+  var answerkoalt = document.getElementById("answer-ko-alt");
+  answerkoalt.textContent = currentItem.alt;
   $(correct ? "#modal-ok" : "#modal-ko").modal("toggle");
 }
 
@@ -1211,7 +1220,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36631" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40371" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

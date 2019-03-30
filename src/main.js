@@ -66,19 +66,24 @@ function choseOptions()
 
     //insert current word
     let rightOptionTecnica = -1;
+    let rightWordTec = "";
     if (currentWord < currentItem.tecnica.split(" ").filter( x=> x!="" ).length)
     {
-        let rightWord = currentItem.tecnica.split(" ").filter( x=> x!="" )[currentWord];
+        rightWordTec = currentItem.tecnica.split(" ").filter( x=> x!="" )[currentWord];
         rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
-        currentOptions[rightOptionTecnica] = rightWord;
+        currentOptions[rightOptionTecnica] = rightWordTec;
     }
 
     //insert alt word
     if (currentWord < currentItem.alt.split(" ").filter(x=>x!="").length)
     {
-        let rightWord = currentItem.alt.split(" ").filter( x=> x!="" )[currentWord];
-        do {rightOptionAlt = Math.floor(Math.random() * currentOptions.length)} while(rightOptionAlt !=rightOptionTecnica ) ;
-        currentOptions[rightOptionAlt] = rightWord;
+        let rightWordAlt = currentItem.alt.split(" ").filter( x=> x!="" )[currentWord];
+        if (rightWordAlt != rightWordTec)
+        {
+            let rightOptionAlt = -1;
+            do {rightOptionAlt = Math.floor(Math.random() * currentOptions.length)} while(rightOptionAlt == rightOptionTecnica ) ;
+            currentOptions[rightOptionAlt] = rightWordAlt;    
+        }
     }
 
     //show
@@ -143,9 +148,13 @@ function showreview(correct)
 
     let answerok = document.getElementById("answer-ok");
     answerok.textContent = currentItem.tecnica;
+    let answerokalt = document.getElementById("answer-ok-alt");
+    answerokalt.textContent = currentItem.alt;
 
     let answerko = document.getElementById("answer-ko");
     answerko.textContent = currentItem.tecnica;
+    let answerkoalt = document.getElementById("answer-ko-alt");
+    answerkoalt.textContent = currentItem.alt;
 
     $(correct?"#modal-ok":"#modal-ko").modal("toggle");
 
