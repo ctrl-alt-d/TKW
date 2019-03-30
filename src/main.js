@@ -49,33 +49,35 @@ function initialize()
 
 function choseOptions()
 {
+    //
+    let currentItemWords = (currentItem.tecnica + " " + currentItem.alt ) .split(" ").filter( x=> x!="" );
+    let alltecniquesWithOutCurrentItemWords = alltecniques.filter( x=> x!="" && !currentItemWords.includes(x) );
+
     //take 5
-    currentOptions=[];
+    currentOptions=[];    
     do 
     {
-        let word = alltecniques[Math.floor(Math.random() * alltecniques.length)];
+        let word = alltecniquesWithOutCurrentItemWords[Math.floor(Math.random() * alltecniquesWithOutCurrentItemWords.length)];
         if (!currentOptions.includes(word)) {
             currentOptions.push(word);
         }
     }
     while( currentOptions.length < 5);
 
-    //sure word is in
+    //insert current word
     let rightOptionTecnica = -1;
-    if (currentWord < currentItem.tecnica.split(" ").length)
+    if (currentWord < currentItem.tecnica.split(" ").filter( x=> x!="" ).length)
     {
-        let rightWord = currentItem.tecnica.split(" ")[currentWord];
-        rightOptionTecnica = currentOptions.indexOf(rightWord);
-        if (rightOptionTecnica == -1) rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
+        let rightWord = currentItem.tecnica.split(" ").filter( x=> x!="" )[currentWord];
+        rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
         currentOptions[rightOptionTecnica] = rightWord;
     }
 
-    //sure alt also present
+    //insert alt word
     if (currentWord < currentItem.alt.split(" ").filter(x=>x!="").length)
     {
-        let rightWord = currentItem.alt.split(" ")[currentWord];
-        let rightOptionAlt = currentOptions.indexOf(rightWord);
-        if (rightOptionAlt == -1) do {rightOptionAlt = Math.floor(Math.random() * currentOptions.length)} while(rightOptionAlt !=rightOptionTecnica ) ;
+        let rightWord = currentItem.alt.split(" ").filter( x=> x!="" )[currentWord];
+        do {rightOptionAlt = Math.floor(Math.random() * currentOptions.length)} while(rightOptionAlt !=rightOptionTecnica ) ;
         currentOptions[rightOptionAlt] = rightWord;
     }
 
@@ -163,11 +165,11 @@ function setlevel(l)
     MyQ = Q.filter(x=>levelnumber[x.level] <= level );
     
     //tots els noms a majúscules amb un sol espai
-    MyQ.forEach( x=> x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ") );
-    MyQ.forEach( x=> x.alt = x.alt.toUpperCase().split(" ").join(" ") );
+    MyQ.forEach( x=> x.tecnica = x.tecnica.toUpperCase().split(" ").filter( x=> x!="" ).join(" ") );
+    MyQ.forEach( x=> x.alt = x.alt.toUpperCase().split(" ").filter( x=> x!="" ).join(" ") );
 
     //getletalltecniques
-    alltecniques=[].concat.apply([], MyQ.map(x=>x.tecnica.split(" ")) );
+    alltecniques=[].concat.apply([], MyQ.map(x=>x.tecnica.split(" ").filter( x=> x!="" )) );
     if (alltecniques.length<5) alltecniques = alltecniques.concat([" - "," :) "," :( ", " kiap "]);
 
     //

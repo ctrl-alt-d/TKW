@@ -1035,36 +1035,49 @@ function initialize() {
 }
 
 function choseOptions() {
-  //take 5
+  //
+  var currentItemWords = (currentItem.tecnica + " " + currentItem.alt).split(" ").filter(function (x) {
+    return x != "";
+  });
+  var alltecniquesWithOutCurrentItemWords = alltecniques.filter(function (x) {
+    return x != "" && !currentItemWords.includes(x);
+  }); //take 5
+
   currentOptions = [];
 
   do {
-    var word = alltecniques[Math.floor(Math.random() * alltecniques.length)];
+    var word = alltecniquesWithOutCurrentItemWords[Math.floor(Math.random() * alltecniquesWithOutCurrentItemWords.length)];
 
     if (!currentOptions.includes(word)) {
       currentOptions.push(word);
     }
-  } while (currentOptions.length < 5); //sure word is in
+  } while (currentOptions.length < 5); //insert current word
 
 
   var rightOptionTecnica = -1;
 
-  if (currentWord < currentItem.tecnica.split(" ").length) {
-    var rightWord = currentItem.tecnica.split(" ")[currentWord];
-    rightOptionTecnica = currentOptions.indexOf(rightWord);
-    if (rightOptionTecnica == -1) rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
+  if (currentWord < currentItem.tecnica.split(" ").filter(function (x) {
+    return x != "";
+  }).length) {
+    var rightWord = currentItem.tecnica.split(" ").filter(function (x) {
+      return x != "";
+    })[currentWord];
+    rightOptionTecnica = Math.floor(Math.random() * currentOptions.length);
     currentOptions[rightOptionTecnica] = rightWord;
-  } //sure alt also present
+  } //insert alt word
 
 
   if (currentWord < currentItem.alt.split(" ").filter(function (x) {
     return x != "";
   }).length) {
-    var _rightWord = currentItem.alt.split(" ")[currentWord];
-    var rightOptionAlt = currentOptions.indexOf(_rightWord);
-    if (rightOptionAlt == -1) do {
+    var _rightWord = currentItem.alt.split(" ").filter(function (x) {
+      return x != "";
+    })[currentWord];
+
+    do {
       rightOptionAlt = Math.floor(Math.random() * currentOptions.length);
     } while (rightOptionAlt != rightOptionTecnica);
+
     currentOptions[rightOptionAlt] = _rightWord;
   } //show
 
@@ -1141,14 +1154,20 @@ function setlevel(l) {
   }); //tots els noms a majúscules amb un sol espai
 
   MyQ.forEach(function (x) {
-    return x.tecnica = x.tecnica.toUpperCase().split(" ").join(" ");
+    return x.tecnica = x.tecnica.toUpperCase().split(" ").filter(function (x) {
+      return x != "";
+    }).join(" ");
   });
   MyQ.forEach(function (x) {
-    return x.alt = x.alt.toUpperCase().split(" ").join(" ");
+    return x.alt = x.alt.toUpperCase().split(" ").filter(function (x) {
+      return x != "";
+    }).join(" ");
   }); //getletalltecniques
 
   alltecniques = [].concat.apply([], MyQ.map(function (x) {
-    return x.tecnica.split(" ");
+    return x.tecnica.split(" ").filter(function (x) {
+      return x != "";
+    });
   }));
   if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]); //
 
@@ -1192,7 +1211,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34901" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36631" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
