@@ -968,16 +968,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var images = require('./assets/*.png');
 
-var alltecniques = [];
-var currentWord = 0;
-var previousTechnique = "";
-var currentItem = null;
-var currentOptions = [];
-var score = 0;
-var level = 0;
-var MyQ = [];
-var levelsNames = ["Groc", "Taronja", "Verd", "Blau", "Marró", "Negre"];
-
 function initialize() {
   var _loop = function _loop(i) {
     var option = document.getElementById("a" + i);
@@ -1035,6 +1025,154 @@ function initialize() {
 }
 
 function choseOptions() {
+  var currentOptions = choseOptionsClass(); //show
+
+  for (var i = 0; i < 5; i++) {
+    var option = document.getElementById("a" + i);
+    option.textContent = currentOptions[i];
+  }
+}
+
+function starttest() {
+  //clear answer
+  var myanswer = document.getElementById("my-answer");
+  myanswer.textContent = ""; //get item
+
+  getItemClass(); //video
+
+  document.getElementById("picture-div").style.display = "none";
+  [].forEach.call(document.getElementsByClassName("play-video"), function (x) {
+    return x.style.display = "";
+  });
+  var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", currentItem.video).replace("XXXXX", currentItem.video);
+  var domVideo = document.getElementById("video");
+  domVideo.setAttribute("src", videourl);
+  choseOptions();
+}
+
+function answerpressed(i) {
+  var myanswer = document.getElementById("my-answer");
+  myanswer.textContent = (myanswer.textContent + " " + currentOptions[i]).trim();
+  currentWord++;
+  choseOptions();
+}
+
+function testpressed() {
+  var myanswer = document.getElementById("my-answer");
+  var correct = checkCorrectClass(myanswer.textContent);
+  var domscore = document.getElementById("score");
+  domscore.innerText = "TKD (" + levelsNames[level] + ") " + score;
+  showreview(correct);
+}
+
+function showreview(correct) {
+  var answerok = document.getElementById("answer-ok");
+  answerok.textContent = currentItem.tecnica;
+  var answerokalt = document.getElementById("answer-ok-alt");
+  answerokalt.textContent = currentItem.alt;
+  var answerko = document.getElementById("answer-ko");
+  answerko.textContent = currentItem.tecnica;
+  var answerkoalt = document.getElementById("answer-ko-alt");
+  answerkoalt.textContent = currentItem.alt;
+  $(correct ? "#modal-ok" : "#modal-ko").modal("toggle");
+}
+
+function reviewpressed() {
+  currentWord = 0;
+  starttest();
+}
+
+function setlevel(l) {
+  massageQuestionsClass(l); //
+
+  var domscore = document.getElementById("score");
+  domscore.innerText = "TKD Objectiu: " + levelNameClass() + " ";
+  $("#modal-level").modal("toggle");
+  starttest();
+}
+
+initialize();
+
+document.getElementById("share").onclick = function () {
+  (0, _vanillaSharing.fbButton)({
+    url: 'https://ctrl-alt-d.github.io/TKW/'
+  });
+};
+/* --------------- class elements ----------------- */
+
+
+var alltecniques = [];
+var currentWord = 0;
+var previousTechnique = "";
+var currentItem = null;
+var currentOptions = [];
+var score = 0;
+var level = 0;
+var MyQ = [];
+var levelsNames = ["Groc", "Taronja", "Verd", "Blau", "Marró", "Negre"];
+
+function getItemClass() {
+  //get item
+  do {
+    currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
+  } while (currentItem.tecnica == previousTechnique);
+
+  previousTechnique = currentItem.tecnica;
+}
+
+function levelNameClass() {
+  var levelnumber = {
+    "groc": 0,
+    "taronja": 1,
+    "verd": 2,
+    "blau": 3,
+    "marró": 4,
+    "negre": 5
+  };
+  return levelsNames[level];
+}
+
+function massageQuestionsClass(l) {
+  level = l;
+  var levelnumber = {
+    "groc": 0,
+    "taronja": 1,
+    "verd": 2,
+    "blau": 3,
+    "marró": 4,
+    "negre": 5
+  };
+  MyQ = _questions.default.filter(function (x) {
+    return levelnumber[x.level] <= level;
+  }); //tots els noms a majúscules amb un sol espai
+
+  MyQ.forEach(function (x) {
+    return x.tecnica = x.tecnica.toUpperCase().split(" ").filter(function (x) {
+      return x != "";
+    }).join(" ");
+  });
+  MyQ.forEach(function (x) {
+    return x.alt = x.alt.toUpperCase().split(" ").filter(function (x) {
+      return x != "";
+    }).join(" ");
+  }); //getletalltecniques
+
+  alltecniques = [].concat.apply([], MyQ.map(function (x) {
+    return x.tecnica.split(" ").filter(function (x) {
+      return x != "";
+    });
+  }));
+  if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]);
+}
+
+function checkCorrectClass(answer) {
+  var correct = answer == currentItem.tecnica || currentItem.alt != "" && answer == currentItem.alt;
+  score += correct ? 1 : -1;
+  score = score < 0 ? 0 : score;
+  return correct;
+}
+
+function choseOptionsClass() {
   //
   var currentItemWords = (currentItem.tecnica + " " + currentItem.alt).split(" ").filter(function (x) {
     return x != "";
@@ -1084,115 +1222,10 @@ function choseOptions() {
 
       currentOptions[rightOptionAlt] = rightWordAlt;
     }
-  } //show
-
-
-  for (var i = 0; i < 5; i++) {
-    var option = document.getElementById("a" + i);
-    option.textContent = currentOptions[i];
   }
+
+  return currentOptions;
 }
-
-function starttest() {
-  //clear answer
-  var myanswer = document.getElementById("my-answer");
-  myanswer.textContent = ""; //get item
-
-  do {
-    currentItem = MyQ[Math.floor(Math.random() * MyQ.length)];
-  } while (currentItem.tecnica == previousTechnique);
-
-  previousTechnique = currentItem.tecnica; //video
-
-  document.getElementById("picture-div").style.display = "none";
-  [].forEach.call(document.getElementsByClassName("play-video"), function (x) {
-    return x.style.display = "";
-  });
-  var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", currentItem.video).replace("XXXXX", currentItem.video);
-  var domVideo = document.getElementById("video");
-  domVideo.setAttribute("src", videourl);
-  choseOptions();
-}
-
-function answerpressed(i) {
-  var myanswer = document.getElementById("my-answer");
-  myanswer.textContent = (myanswer.textContent + " " + currentOptions[i]).trim();
-  currentWord++;
-  choseOptions();
-}
-
-function testpressed() {
-  var myanswer = document.getElementById("my-answer");
-  var correct = myanswer.textContent == currentItem.tecnica || currentItem.alt != "" && myanswer.textContent == currentItem.alt;
-  score += correct ? 1 : -1;
-  score = score < 0 ? 0 : score;
-  var domscore = document.getElementById("score");
-  domscore.innerText = "TKD (" + levelsNames[level] + ") " + score;
-  showreview(correct);
-}
-
-function showreview(correct) {
-  var answerok = document.getElementById("answer-ok");
-  answerok.textContent = currentItem.tecnica;
-  var answerokalt = document.getElementById("answer-ok-alt");
-  answerokalt.textContent = currentItem.alt;
-  var answerko = document.getElementById("answer-ko");
-  answerko.textContent = currentItem.tecnica;
-  var answerkoalt = document.getElementById("answer-ko-alt");
-  answerkoalt.textContent = currentItem.alt;
-  $(correct ? "#modal-ok" : "#modal-ko").modal("toggle");
-}
-
-function reviewpressed() {
-  currentWord = 0;
-  starttest();
-}
-
-function setlevel(l) {
-  level = l;
-  var levelnumber = {
-    "groc": 0,
-    "taronja": 1,
-    "verd": 2,
-    "blau": 3,
-    "marró": 4,
-    "negre": 5
-  };
-  MyQ = _questions.default.filter(function (x) {
-    return levelnumber[x.level] <= level;
-  }); //tots els noms a majúscules amb un sol espai
-
-  MyQ.forEach(function (x) {
-    return x.tecnica = x.tecnica.toUpperCase().split(" ").filter(function (x) {
-      return x != "";
-    }).join(" ");
-  });
-  MyQ.forEach(function (x) {
-    return x.alt = x.alt.toUpperCase().split(" ").filter(function (x) {
-      return x != "";
-    }).join(" ");
-  }); //getletalltecniques
-
-  alltecniques = [].concat.apply([], MyQ.map(function (x) {
-    return x.tecnica.split(" ").filter(function (x) {
-      return x != "";
-    });
-  }));
-  if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]); //
-
-  var domscore = document.getElementById("score");
-  domscore.innerText = "TKD Objectiu: " + levelsNames[level] + " ";
-  $("#modal-level").modal("toggle");
-  starttest();
-}
-
-initialize();
-
-document.getElementById("share").onclick = function () {
-  (0, _vanillaSharing.fbButton)({
-    url: 'https://ctrl-alt-d.github.io/TKW/'
-  });
-};
 },{"./questions":"questions.js","vanilla-sharing":"../node_modules/vanilla-sharing/dist/vanilla-sharing.esm.js","./assets/*.png":"assets/*.png"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1220,7 +1253,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40739" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36173" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
