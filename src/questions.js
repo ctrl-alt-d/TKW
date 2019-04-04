@@ -1,4 +1,4 @@
-const Q = [
+export const Q = [
 
  { "level":"groc", "negre":"si", "tecnica":"are maki", "video":"y3nUBMaMIgw", "alt": "", "picture": "are-makki" },
  { "level":"groc", "negre":"si", "tecnica":"montong maki", "video":"5dpFzb5eges", "alt": "", "picture": "are-makki" },
