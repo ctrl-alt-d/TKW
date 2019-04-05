@@ -73,9 +73,10 @@ function starttest() {
     //video
     document.getElementById("picture-div").style.display="none";
     [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
+
+    $("#video-div").fadeIn( "slow" );
     let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
     let domVideo = document.getElementById("video");
-    domVideo.setAttribute("src", "" );
     domVideo.setAttribute("src", videourl);
 
     let domVideoCodi = document.getElementById("video-codi");
@@ -95,6 +96,10 @@ function answerpressed(i)
 
 function testpressed()
 {
+    $("#video-div").fadeOut( "slow" );
+    let domVideo = document.getElementById("video");
+    domVideo.setAttribute("src", "" );
+
     let myanswer = document.getElementById("my-answer");
     let correct = t.checkCorrectClass(myanswer.textContent);
 
