@@ -576,10 +576,10 @@ function massageQuestionsClass(l, q) {
   }); //getletalltecniques
 
   alltecniques = [].concat.apply([], MyQ.map(function (x) {
-    return x.tecnica.split(" ").filter(function (x) {
-      return x != "";
-    });
-  }));
+    return x.tecnica.split(" ");
+  })).filter(function (x) {
+    return x != "";
+  });
   if (alltecniques.length < 5) alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]);
 }
 
@@ -596,7 +596,7 @@ function choseOptionsClass() {
     return x != "";
   });
   var alltecniquesWithOutCurrentItemWords = alltecniques.filter(function (x) {
-    return x != "" && !currentItemWords.includes(x);
+    return !currentItemWords.includes(x);
   }); //take 5
 
   exports.currentOptions = currentOptions = [];
@@ -1212,7 +1212,10 @@ function starttest() {
   });
   var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
   var domVideo = document.getElementById("video");
+  domVideo.setAttribute("src", "");
   domVideo.setAttribute("src", videourl);
+  var domVideoCodi = document.getElementById("video-codi");
+  domVideoCodi.innerText = t.currentItem.video;
   choseOptions();
 }
 
@@ -1285,7 +1288,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44231" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38451" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

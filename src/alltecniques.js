@@ -34,7 +34,7 @@ export function massageQuestionsClass(l, q ) {
     MyQ.forEach(x => x.tecnica = x.tecnica.toUpperCase().split(" ").filter(x => x != "").join(" "));
     MyQ.forEach(x => x.alt = x.alt.toUpperCase().split(" ").filter(x => x != "").join(" "));
     //getletalltecniques
-    alltecniques = [].concat.apply([], MyQ.map(x => x.tecnica.split(" ").filter(x => x != "")));
+    alltecniques = [].concat.apply([], MyQ.map(x => x.tecnica.split(" "))).filter(x => x != "");
     if (alltecniques.length < 5)
         alltecniques = alltecniques.concat([" - ", " :) ", " :( ", " kiap "]);
 }
@@ -48,7 +48,8 @@ export function checkCorrectClass(answer) {
 export function choseOptionsClass() {
     //
     let currentItemWords = (currentItem.tecnica + " " + currentItem.alt).split(" ").filter(x => x != "");
-    let alltecniquesWithOutCurrentItemWords = alltecniques.filter(x => x != "" && !currentItemWords.includes(x));
+    let alltecniquesWithOutCurrentItemWords = alltecniques.filter(x =>!currentItemWords.includes(x));
+
     //take 5
     currentOptions = [];
     do {
@@ -57,6 +58,9 @@ export function choseOptionsClass() {
             currentOptions.push(word);
         }
     } while (currentOptions.length < 5);
+
+
+    
     //insert current word
     let rightOptionTecnica = -1;
     let rightWordTec = "";

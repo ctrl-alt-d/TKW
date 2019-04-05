@@ -75,7 +75,11 @@ function starttest() {
     [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
     let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
     let domVideo = document.getElementById("video");
+    domVideo.setAttribute("src", "" );
     domVideo.setAttribute("src", videourl);
+
+    let domVideoCodi = document.getElementById("video-codi");
+    domVideoCodi.innerText = t.currentItem.video;
 
     choseOptions();
 
