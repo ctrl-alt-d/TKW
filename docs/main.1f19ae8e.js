@@ -794,7 +794,7 @@ var Q = [{
 }, {
   "level": "taronja",
   "negre": "si",
-  "tecnica": "ogul bande jirugui",
+  "tecnica": "olgul bande jirugui",
   "video": "Jpst_GappfM",
   "alt": "",
   "picture": "are-makki"
@@ -1096,22 +1096,22 @@ var Q = [{
 exports.Q = Q;
 var _default = Q;
 exports.default = _default;
+},{}],"assets/are-makki.png":[function(require,module,exports) {
+module.exports = "/TKW/are-makki.c1e94bc1.png";
 },{}],"assets/gm.png":[function(require,module,exports) {
 module.exports = "/TKW/gm.6ef19f89.png";
 },{}],"assets/montong-an-makki.png":[function(require,module,exports) {
 module.exports = "/TKW/montong-an-makki.4cb6432c.png";
 },{}],"assets/montong-makki.png":[function(require,module,exports) {
 module.exports = "/TKW/montong-makki.29057413.png";
-},{}],"assets/are-makki.png":[function(require,module,exports) {
-module.exports = "/TKW/are-makki.c1e94bc1.png";
 },{}],"assets/*.png":[function(require,module,exports) {
 module.exports = {
+  "are-makki": require("./are-makki.png"),
   "gm": require("./gm.png"),
   "montong-an-makki": require("./montong-an-makki.png"),
-  "montong-makki": require("./montong-makki.png"),
-  "are-makki": require("./are-makki.png")
+  "montong-makki": require("./montong-makki.png")
 };
-},{"./gm.png":"assets/gm.png","./montong-an-makki.png":"assets/montong-an-makki.png","./montong-makki.png":"assets/montong-makki.png","./are-makki.png":"assets/are-makki.png"}],"main.js":[function(require,module,exports) {
+},{"./are-makki.png":"assets/are-makki.png","./gm.png":"assets/gm.png","./montong-an-makki.png":"assets/montong-an-makki.png","./montong-makki.png":"assets/montong-makki.png"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _vanillaSharing = require("vanilla-sharing");
@@ -1209,8 +1209,8 @@ function starttest() {
   document.getElementById("picture-div").style.display = "none";
   [].forEach.call(document.getElementsByClassName("play-video"), function (x) {
     return x.style.display = "";
-  });
-  $("#video-div").fadeIn("slow");
+  }); //$("#video-div").fadeIn( "slow" );
+
   var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
   var domVideo = document.getElementById("video");
   domVideo.setAttribute("src", videourl);
@@ -1227,7 +1227,7 @@ function answerpressed(i) {
 }
 
 function testpressed() {
-  $("#video-div").fadeOut("slow");
+  //$("#video-div").fadeOut( "slow" );
   var domVideo = document.getElementById("video");
   domVideo.setAttribute("src", "");
   var myanswer = document.getElementById("my-answer");
@@ -1291,7 +1291,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34545" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33181" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
