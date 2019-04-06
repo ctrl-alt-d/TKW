@@ -1126,6 +1126,9 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var images = require('./assets/*.png');
 
+var htmlVideo = "\n<div class=\"embed-responsive embed-responsive-16by9 play-video\">\n<iframe class=\"play-video\" id=\"video\" width=\"420\" height=\"315\"\n        src=\"https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1\" >\n</iframe>\n</div>\n<div ><h6 style=\"color: gray; font-size: 50%;\" id=\"video-codi\"></h6></div>\n";
+var htmlLoading = "\n<div id=\"picture-div\" class=\"col-12 col-lg-6\">\n<div>Loading</div>\n<img id=\"picture\" class=\"img-fluid\" />\n</div>\n";
+
 function initialize() {
   var _loop = function _loop(i) {
     var option = document.getElementById("a" + i);
@@ -1204,16 +1207,12 @@ function starttest() {
   var myanswer = document.getElementById("my-answer");
   myanswer.textContent = ""; //get item
 
-  t.getItemClass(); //video
+  t.getItemClass(); //$("#video-div").fadeIn( "slow" );
 
-  document.getElementById("picture-div").style.display = "none";
-  [].forEach.call(document.getElementsByClassName("play-video"), function (x) {
-    return x.style.display = "";
-  }); //$("#video-div").fadeIn( "slow" );
-
-  var videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
-  var domVideo = document.getElementById("video");
-  domVideo.setAttribute("src", videourl);
+  var domVideo = document.getElementById("video-div");
+  domVideo.innerHTML = htmlLoading;
+  var newHtmlVideo = htmlVideo.replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
+  domVideo.innerHTML = newHtmlVideo;
   var domVideoCodi = document.getElementById("video-codi");
   domVideoCodi.innerText = t.currentItem.video;
   choseOptions();
@@ -1228,8 +1227,6 @@ function answerpressed(i) {
 
 function testpressed() {
   //$("#video-div").fadeOut( "slow" );
-  var domVideo = document.getElementById("video");
-  domVideo.setAttribute("src", "");
   var myanswer = document.getElementById("my-answer");
   var correct = t.checkCorrectClass(myanswer.textContent);
   var domscore = document.getElementById("score");
@@ -1291,7 +1288,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33181" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41879" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

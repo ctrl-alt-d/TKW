@@ -5,6 +5,21 @@ import Q from "./questions";
 
 const images = require('./assets/*.png');
 
+const htmlVideo = `
+<div class="embed-responsive embed-responsive-16by9 play-video">
+<iframe class="play-video" id="video" width="420" height="315"
+        src="https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1" >
+</iframe>
+</div>
+<div ><h6 style="color: gray; font-size: 50%;" id="video-codi"></h6></div>
+`
+const htmlLoading = `
+<div id="picture-div" class="col-12 col-lg-6">
+<div>Loading</div>
+<img id="picture" class="img-fluid" />
+</div>
+`
+
 function initialize()
 {
 
@@ -70,14 +85,11 @@ function starttest() {
     //get item
     t.getItemClass();
     
-    //video
-    document.getElementById("picture-div").style.display="none";
-    [].forEach.call( document.getElementsByClassName("play-video") , (x) => x.style.display="" );
-
     //$("#video-div").fadeIn( "slow" );
-    let videourl = "https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1".replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
-    let domVideo = document.getElementById("video");
-    domVideo.setAttribute("src", videourl);
+    let domVideo = document.getElementById("video-div");
+    domVideo.innerHTML=htmlLoading;
+    let newHtmlVideo = htmlVideo.replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
+    domVideo.innerHTML = newHtmlVideo;
 
     let domVideoCodi = document.getElementById("video-codi");
     domVideoCodi.innerText = t.currentItem.video;
@@ -97,9 +109,7 @@ function answerpressed(i)
 function testpressed()
 {
     //$("#video-div").fadeOut( "slow" );
-    let domVideo = document.getElementById("video");
-    domVideo.setAttribute("src", "" );
-
+ 
     let myanswer = document.getElementById("my-answer");
     let correct = t.checkCorrectClass(myanswer.textContent);
 
