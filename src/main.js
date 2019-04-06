@@ -11,7 +11,7 @@ const htmlVideo = `
         src="https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1" >
 </iframe>
 </div>
-<div ><h6 style="color: gray; font-size: 50%;" id="video-codi"></h6></div>
+<div ><h6 style="color: gray; font-size: 50%;" id="video-codi">XXXXX</h6></div>
 `
 const htmlLoading = `
 <div id="picture-div" class="col-12 col-lg-6">
@@ -39,8 +39,6 @@ function initialize()
     okbbton.onclick = ()=>reviewpressed();
     let kobbton = document.getElementById("ko-button");
     kobbton.onclick = ()=>reviewpressed();
-    $('#modal-ok').on('hidden.bs.modal', ()=>reviewpressed() );
-    $('#modal-ko').on('hidden.bs.modal', ()=>reviewpressed() );
 
     //levels
     for (let i=0; i<6; i++)
@@ -88,11 +86,11 @@ function starttest() {
     //$("#video-div").fadeIn( "slow" );
     let domVideo = document.getElementById("video-div");
     domVideo.innerHTML=htmlLoading;
-    let newHtmlVideo = htmlVideo.replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
+    let newHtmlVideo = htmlVideo
+                        .replace("XXXXX", t.currentItem.video)
+                        .replace("XXXXX", t.currentItem.video)
+                        .replace("XXXXX", t.currentItem.video);
     domVideo.innerHTML = newHtmlVideo;
-
-    let domVideoCodi = document.getElementById("video-codi");
-    domVideoCodi.innerText = t.currentItem.video;
 
     choseOptions();
 
