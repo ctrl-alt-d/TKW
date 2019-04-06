@@ -8,6 +8,8 @@ yarn-error.log*
 .cache/
 
 venv/
+.vscode/
+__pycache__/
 
 # Runtime data
 pids
