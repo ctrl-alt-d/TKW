@@ -100,9 +100,9 @@ function starttest() {
                         .replace("XXXXX", t.currentItem.video)
                         .replace("XXXXX", t.currentItem.video)
                         .replace("XXXXX", t.currentItem.video);
-    let newHtmlImage = htmlImage
-                        .replace("XXXXX", t.currentItem.video)
-                        .replace("XXXXX", images[t.currentItem.video]);
+    let newHtmlImage = htmlImage                        
+                        .replace("XXXXX", images[t.currentItem.video])
+                        .replace("XXXXX", t.currentItem.video);
 
     domVideo.innerHTML = newHtmlImage;
     domVideo.onclick = () => domVideo.innerHTML = newHtmlVideo;
