@@ -14,6 +14,8 @@ element = wait.until( EC.visibility_of_element_located((By.ID, "modal-level")) )
 element = wait.until(EC.element_to_be_clickable((By.ID, "level-5")))
 time.sleep(1)
 element.click()
+element = wait.until( EC.invisibility_of_element_located((By.CLASS_NAME, "modal-backdrop fade")) )
+
 
 while True:
     # espero codi video
@@ -23,7 +25,8 @@ while True:
     # clico la resposta
     for r in current["tecnica"].upper().split():
         element = next( e for e in driver.find_elements_by_class_name("opcio") if e.text == r )
-        element.click()
+        element = wait.until(EC.element_to_be_clickable((By.ID, element.get_attribute("id"))))
+        driver.execute_script(( "document.getElementById('"+ element.get_attribute("id") +"').click()" ) )
         _ = wait.until( EC.text_to_be_present_in_element( (By.ID, "my-answer"), r ) )
 
     # click text

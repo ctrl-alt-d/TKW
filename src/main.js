@@ -101,7 +101,7 @@ function starttest() {
                         .replace("XXXXX", t.currentItem.video)
                         .replace("XXXXX", t.currentItem.video);
     let newHtmlImage = htmlImage                        
-                        .replace("XXXXX", images[ t.currentItem.video.starsWith("_")?t.currentItem.video.substr(1):t.currentItem.video ])
+                        .replace("XXXXX", images[ t.currentItem.video.charAt(0)=="_"?t.currentItem.video.substr(1):t.currentItem.video ])
                         .replace("XXXXX", t.currentItem.video);
 
     domVideo.innerHTML = newHtmlImage;

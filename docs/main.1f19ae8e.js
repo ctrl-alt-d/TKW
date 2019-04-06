@@ -1164,10 +1164,6 @@ module.exports = "/TKW/YjJmEHA62Ck.870708a3.png";
 module.exports = "/TKW/Z9rnJ15KKCU.7d2625d9.png";
 },{}],"assets/ZbOd9D6RdYw.png":[function(require,module,exports) {
 module.exports = "/TKW/ZbOd9D6RdYw.affa1366.png";
-},{}],"assets/_pmtJV1w_Q0.png":[function(require,module,exports) {
-module.exports = "/TKW/_pmtJV1w_Q0.421013d0.png";
-},{}],"assets/_vaC0DUpohg.png":[function(require,module,exports) {
-module.exports = "/TKW/_vaC0DUpohg.c15980c6.png";
 },{}],"assets/a1C56KYeL2E.png":[function(require,module,exports) {
 module.exports = "/TKW/a1C56KYeL2E.0470dc8d.png";
 },{}],"assets/aI-HSZCWGyc.png":[function(require,module,exports) {
@@ -1186,10 +1182,10 @@ module.exports = "/TKW/ea7GPUMsm6w.9ecc4cf4.png";
 module.exports = "/TKW/eb52M8MPbIM.eb61f7b1.png";
 },{}],"assets/f0wssE3FkYQ.png":[function(require,module,exports) {
 module.exports = "/TKW/f0wssE3FkYQ.6a8617e8.png";
-},{}],"assets/gm.png":[function(require,module,exports) {
-module.exports = "/TKW/gm.6ef19f89.png";
 },{}],"assets/gbsfs9E3NI0.png":[function(require,module,exports) {
 module.exports = "/TKW/gbsfs9E3NI0.556720e1.png";
+},{}],"assets/gm.png":[function(require,module,exports) {
+module.exports = "/TKW/gm.6ef19f89.png";
 },{}],"assets/hWcDlF0r8DM.png":[function(require,module,exports) {
 module.exports = "/TKW/hWcDlF0r8DM.82cef343.png";
 },{}],"assets/iO-Py_LDQYM.png":[function(require,module,exports) {
@@ -1208,12 +1204,16 @@ module.exports = "/TKW/mVd6rud9Wjc.29d5c451.png";
 module.exports = "/TKW/mY-lCnt12Ck.6a0a1bbf.png";
 },{}],"assets/nEe4xzKwHQo.png":[function(require,module,exports) {
 module.exports = "/TKW/nEe4xzKwHQo.1b9e8a97.png";
+},{}],"assets/pmtJV1w_Q0.png":[function(require,module,exports) {
+module.exports = "/TKW/pmtJV1w_Q0.35758302.png";
 },{}],"assets/uHZ6vmvikAc.png":[function(require,module,exports) {
 module.exports = "/TKW/uHZ6vmvikAc.3d579c36.png";
 },{}],"assets/vHFKx2jRcCU.png":[function(require,module,exports) {
 module.exports = "/TKW/vHFKx2jRcCU.3caf0a35.png";
 },{}],"assets/vYhSC67r93o.png":[function(require,module,exports) {
 module.exports = "/TKW/vYhSC67r93o.f696de86.png";
+},{}],"assets/vaC0DUpohg.png":[function(require,module,exports) {
+module.exports = "/TKW/vaC0DUpohg.7e7dc70d.png";
 },{}],"assets/wK_1zLUnwQY.png":[function(require,module,exports) {
 module.exports = "/TKW/wK_1zLUnwQY.10a568dc.png";
 },{}],"assets/y3nUBMaMIgw.png":[function(require,module,exports) {
@@ -1262,8 +1262,6 @@ module.exports = {
   "YjJmEHA62Ck": require("./YjJmEHA62Ck.png"),
   "Z9rnJ15KKCU": require("./Z9rnJ15KKCU.png"),
   "ZbOd9D6RdYw": require("./ZbOd9D6RdYw.png"),
-  "_pmtJV1w_Q0": require("./_pmtJV1w_Q0.png"),
-  "_vaC0DUpohg": require("./_vaC0DUpohg.png"),
   "a1C56KYeL2E": require("./a1C56KYeL2E.png"),
   "aI-HSZCWGyc": require("./aI-HSZCWGyc.png"),
   "c0sDiHSDg0w": require("./c0sDiHSDg0w.png"),
@@ -1273,8 +1271,8 @@ module.exports = {
   "ea7GPUMsm6w": require("./ea7GPUMsm6w.png"),
   "eb52M8MPbIM": require("./eb52M8MPbIM.png"),
   "f0wssE3FkYQ": require("./f0wssE3FkYQ.png"),
-  "gm": require("./gm.png"),
   "gbsfs9E3NI0": require("./gbsfs9E3NI0.png"),
+  "gm": require("./gm.png"),
   "hWcDlF0r8DM": require("./hWcDlF0r8DM.png"),
   "iO-Py_LDQYM": require("./iO-Py_LDQYM.png"),
   "jDuPHXcKiXs": require("./jDuPHXcKiXs.png"),
@@ -1284,9 +1282,11 @@ module.exports = {
   "mVd6rud9Wjc": require("./mVd6rud9Wjc.png"),
   "mY-lCnt12Ck": require("./mY-lCnt12Ck.png"),
   "nEe4xzKwHQo": require("./nEe4xzKwHQo.png"),
+  "pmtJV1w_Q0": require("./pmtJV1w_Q0.png"),
   "uHZ6vmvikAc": require("./uHZ6vmvikAc.png"),
   "vHFKx2jRcCU": require("./vHFKx2jRcCU.png"),
   "vYhSC67r93o": require("./vYhSC67r93o.png"),
+  "vaC0DUpohg": require("./vaC0DUpohg.png"),
   "wK_1zLUnwQY": require("./wK_1zLUnwQY.png"),
   "y3nUBMaMIgw": require("./y3nUBMaMIgw.png"),
   "zXnz75Wh308": require("./zXnz75Wh308.png"),
@@ -1294,7 +1294,7 @@ module.exports = {
   "zjiPglLsdOY": require("./zjiPglLsdOY.png"),
   "zwvB31_dC_k": require("./zwvB31_dC_k.png")
 };
-},{"./2ceqGSwbm8M.png":"assets/2ceqGSwbm8M.png","./3QRqe15zIKE.png":"assets/3QRqe15zIKE.png","./4igah7sddqQ.png":"assets/4igah7sddqQ.png","./524tqlcNlJk.png":"assets/524tqlcNlJk.png","./5dpFzb5eges.png":"assets/5dpFzb5eges.png","./5fkuhw3ykeE.png":"assets/5fkuhw3ykeE.png","./5hEZJ_Y22e0.png":"assets/5hEZJ_Y22e0.png","./7DtMO2tEMGs.png":"assets/7DtMO2tEMGs.png","./ArcCBvkyLA4.png":"assets/ArcCBvkyLA4.png","./BY6J0w04cXQ.png":"assets/BY6J0w04cXQ.png","./C5rBfYD15p4.png":"assets/C5rBfYD15p4.png","./DmnCfnC7qeM.png":"assets/DmnCfnC7qeM.png","./DxDCg_6v9rE.png":"assets/DxDCg_6v9rE.png","./FJHvYN50-K0.png":"assets/FJHvYN50-K0.png","./FznywtUJlJ8.png":"assets/FznywtUJlJ8.png","./G8KCx2g1nfs.png":"assets/G8KCx2g1nfs.png","./GARSXnyJV0U.png":"assets/GARSXnyJV0U.png","./HaSC6PZzw0U.png":"assets/HaSC6PZzw0U.png","./IQS3q3AhbWE.png":"assets/IQS3q3AhbWE.png","./IuvzhF7rfKk.png":"assets/IuvzhF7rfKk.png","./Jdgnmr9enu8.png":"assets/Jdgnmr9enu8.png","./Jpst_GappfM.png":"assets/Jpst_GappfM.png","./Lcs_rJEHvAw.png":"assets/Lcs_rJEHvAw.png","./MW-Pfo0CDMI.png":"assets/MW-Pfo0CDMI.png","./Mu6_Lui_ip4.png":"assets/Mu6_Lui_ip4.png","./Selection_480.png":"assets/Selection_480.png","./SpIJto5c7RM.png":"assets/SpIJto5c7RM.png","./V6WI_u9WPJA.png":"assets/V6WI_u9WPJA.png","./WUPBPPUYWT0.png":"assets/WUPBPPUYWT0.png","./XFsQVojlQ58.png":"assets/XFsQVojlQ58.png","./YExkwhssI9k.png":"assets/YExkwhssI9k.png","./YjJmEHA62Ck.png":"assets/YjJmEHA62Ck.png","./Z9rnJ15KKCU.png":"assets/Z9rnJ15KKCU.png","./ZbOd9D6RdYw.png":"assets/ZbOd9D6RdYw.png","./_pmtJV1w_Q0.png":"assets/_pmtJV1w_Q0.png","./_vaC0DUpohg.png":"assets/_vaC0DUpohg.png","./a1C56KYeL2E.png":"assets/a1C56KYeL2E.png","./aI-HSZCWGyc.png":"assets/aI-HSZCWGyc.png","./c0sDiHSDg0w.png":"assets/c0sDiHSDg0w.png","./dYO7moC38vI.png":"assets/dYO7moC38vI.png","./e6UR_s0NWzI.png":"assets/e6UR_s0NWzI.png","./eLmvdSATImQ.png":"assets/eLmvdSATImQ.png","./ea7GPUMsm6w.png":"assets/ea7GPUMsm6w.png","./eb52M8MPbIM.png":"assets/eb52M8MPbIM.png","./f0wssE3FkYQ.png":"assets/f0wssE3FkYQ.png","./gm.png":"assets/gm.png","./gbsfs9E3NI0.png":"assets/gbsfs9E3NI0.png","./hWcDlF0r8DM.png":"assets/hWcDlF0r8DM.png","./iO-Py_LDQYM.png":"assets/iO-Py_LDQYM.png","./jDuPHXcKiXs.png":"assets/jDuPHXcKiXs.png","./kenoYzX61zo.png":"assets/kenoYzX61zo.png","./l4KM6HRNB48.png":"assets/l4KM6HRNB48.png","./m0eF69SfcPY.png":"assets/m0eF69SfcPY.png","./mVd6rud9Wjc.png":"assets/mVd6rud9Wjc.png","./mY-lCnt12Ck.png":"assets/mY-lCnt12Ck.png","./nEe4xzKwHQo.png":"assets/nEe4xzKwHQo.png","./uHZ6vmvikAc.png":"assets/uHZ6vmvikAc.png","./vHFKx2jRcCU.png":"assets/vHFKx2jRcCU.png","./vYhSC67r93o.png":"assets/vYhSC67r93o.png","./wK_1zLUnwQY.png":"assets/wK_1zLUnwQY.png","./y3nUBMaMIgw.png":"assets/y3nUBMaMIgw.png","./zXnz75Wh308.png":"assets/zXnz75Wh308.png","./z_9Cv3DXcJU.png":"assets/z_9Cv3DXcJU.png","./zjiPglLsdOY.png":"assets/zjiPglLsdOY.png","./zwvB31_dC_k.png":"assets/zwvB31_dC_k.png"}],"main.js":[function(require,module,exports) {
+},{"./2ceqGSwbm8M.png":"assets/2ceqGSwbm8M.png","./3QRqe15zIKE.png":"assets/3QRqe15zIKE.png","./4igah7sddqQ.png":"assets/4igah7sddqQ.png","./524tqlcNlJk.png":"assets/524tqlcNlJk.png","./5dpFzb5eges.png":"assets/5dpFzb5eges.png","./5fkuhw3ykeE.png":"assets/5fkuhw3ykeE.png","./5hEZJ_Y22e0.png":"assets/5hEZJ_Y22e0.png","./7DtMO2tEMGs.png":"assets/7DtMO2tEMGs.png","./ArcCBvkyLA4.png":"assets/ArcCBvkyLA4.png","./BY6J0w04cXQ.png":"assets/BY6J0w04cXQ.png","./C5rBfYD15p4.png":"assets/C5rBfYD15p4.png","./DmnCfnC7qeM.png":"assets/DmnCfnC7qeM.png","./DxDCg_6v9rE.png":"assets/DxDCg_6v9rE.png","./FJHvYN50-K0.png":"assets/FJHvYN50-K0.png","./FznywtUJlJ8.png":"assets/FznywtUJlJ8.png","./G8KCx2g1nfs.png":"assets/G8KCx2g1nfs.png","./GARSXnyJV0U.png":"assets/GARSXnyJV0U.png","./HaSC6PZzw0U.png":"assets/HaSC6PZzw0U.png","./IQS3q3AhbWE.png":"assets/IQS3q3AhbWE.png","./IuvzhF7rfKk.png":"assets/IuvzhF7rfKk.png","./Jdgnmr9enu8.png":"assets/Jdgnmr9enu8.png","./Jpst_GappfM.png":"assets/Jpst_GappfM.png","./Lcs_rJEHvAw.png":"assets/Lcs_rJEHvAw.png","./MW-Pfo0CDMI.png":"assets/MW-Pfo0CDMI.png","./Mu6_Lui_ip4.png":"assets/Mu6_Lui_ip4.png","./Selection_480.png":"assets/Selection_480.png","./SpIJto5c7RM.png":"assets/SpIJto5c7RM.png","./V6WI_u9WPJA.png":"assets/V6WI_u9WPJA.png","./WUPBPPUYWT0.png":"assets/WUPBPPUYWT0.png","./XFsQVojlQ58.png":"assets/XFsQVojlQ58.png","./YExkwhssI9k.png":"assets/YExkwhssI9k.png","./YjJmEHA62Ck.png":"assets/YjJmEHA62Ck.png","./Z9rnJ15KKCU.png":"assets/Z9rnJ15KKCU.png","./ZbOd9D6RdYw.png":"assets/ZbOd9D6RdYw.png","./a1C56KYeL2E.png":"assets/a1C56KYeL2E.png","./aI-HSZCWGyc.png":"assets/aI-HSZCWGyc.png","./c0sDiHSDg0w.png":"assets/c0sDiHSDg0w.png","./dYO7moC38vI.png":"assets/dYO7moC38vI.png","./e6UR_s0NWzI.png":"assets/e6UR_s0NWzI.png","./eLmvdSATImQ.png":"assets/eLmvdSATImQ.png","./ea7GPUMsm6w.png":"assets/ea7GPUMsm6w.png","./eb52M8MPbIM.png":"assets/eb52M8MPbIM.png","./f0wssE3FkYQ.png":"assets/f0wssE3FkYQ.png","./gbsfs9E3NI0.png":"assets/gbsfs9E3NI0.png","./gm.png":"assets/gm.png","./hWcDlF0r8DM.png":"assets/hWcDlF0r8DM.png","./iO-Py_LDQYM.png":"assets/iO-Py_LDQYM.png","./jDuPHXcKiXs.png":"assets/jDuPHXcKiXs.png","./kenoYzX61zo.png":"assets/kenoYzX61zo.png","./l4KM6HRNB48.png":"assets/l4KM6HRNB48.png","./m0eF69SfcPY.png":"assets/m0eF69SfcPY.png","./mVd6rud9Wjc.png":"assets/mVd6rud9Wjc.png","./mY-lCnt12Ck.png":"assets/mY-lCnt12Ck.png","./nEe4xzKwHQo.png":"assets/nEe4xzKwHQo.png","./pmtJV1w_Q0.png":"assets/pmtJV1w_Q0.png","./uHZ6vmvikAc.png":"assets/uHZ6vmvikAc.png","./vHFKx2jRcCU.png":"assets/vHFKx2jRcCU.png","./vYhSC67r93o.png":"assets/vYhSC67r93o.png","./vaC0DUpohg.png":"assets/vaC0DUpohg.png","./wK_1zLUnwQY.png":"assets/wK_1zLUnwQY.png","./y3nUBMaMIgw.png":"assets/y3nUBMaMIgw.png","./zXnz75Wh308.png":"assets/zXnz75Wh308.png","./z_9Cv3DXcJU.png":"assets/z_9Cv3DXcJU.png","./zjiPglLsdOY.png":"assets/zjiPglLsdOY.png","./zwvB31_dC_k.png":"assets/zwvB31_dC_k.png"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _vanillaSharing = require("vanilla-sharing");
@@ -1390,7 +1390,7 @@ function starttest() {
   var domVideo = document.getElementById("video-div");
   domVideo.innerHTML = htmlLoading;
   var newHtmlVideo = htmlVideo.replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
-  var newHtmlImage = htmlImage.replace("XXXXX", images[t.currentItem.video]).replace("XXXXX", t.currentItem.video);
+  var newHtmlImage = htmlImage.replace("XXXXX", images[t.currentItem.video.charAt(0) == "_" ? t.currentItem.video.substr(1) : t.currentItem.video]).replace("XXXXX", t.currentItem.video);
   domVideo.innerHTML = newHtmlImage;
 
   domVideo.onclick = function () {
@@ -1470,7 +1470,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37693" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36003" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
