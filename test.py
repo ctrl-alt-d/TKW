@@ -8,7 +8,7 @@ from testQ import Q
 driver = webdriver.Chrome()
 driver.get("https://ctrl-alt-d.github.io/TKW/")
 wait = WebDriverWait(driver, 10)
-fake_click = lambda: driver.find_element_by_tag_name("body").click()
+fake_click = lambda: driver.find_element_by_tag_name("fake-div").click()
 # nivell negre
 element = wait.until( EC.visibility_of_element_located((By.ID, "modal-level")) )
 element = wait.until(EC.element_to_be_clickable((By.ID, "level-5")))
