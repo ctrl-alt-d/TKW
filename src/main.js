@@ -11,10 +11,20 @@ const htmlVideo = `
         src="https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1" >
 </iframe>
 </div>
-<div ><h6 style="color: gray; font-size: 50%;" id="video-codi">XXXXX</h6></div>
+<div >
+<h6 style="color: gray; font-size: 50%;" id="video-codi">XXXXX</h6></div>
 `
+
+const htmlImage = `
+<div id="picture-div" class="col-12">
+    <img id="picture" style="cursor:pointer;" class="img-fluid" src="XXXXX" />
+    <h1 style="position: absolute;bottom: 45%;left: 45%;color: #F00000;"><i class="far fa-play-circle"></i></h1>
+</div>
+<h6 style="color: gray; font-size: 50%;" id="video-codi">XXXXX</h6></div>
+`
+
 const htmlLoading = `
-<div id="picture-div" class="col-12 col-lg-6">
+<div id="picture-div" class="col-12">
 <div>Loading</div>
 <img id="picture" class="img-fluid" />
 </div>
@@ -90,7 +100,12 @@ function starttest() {
                         .replace("XXXXX", t.currentItem.video)
                         .replace("XXXXX", t.currentItem.video)
                         .replace("XXXXX", t.currentItem.video);
-    domVideo.innerHTML = newHtmlVideo;
+    let newHtmlImage = htmlImage
+                        .replace("XXXXX", t.currentItem.video)
+                        .replace("XXXXX", images[t.currentItem.video]);
+
+    domVideo.innerHTML = newHtmlImage;
+    domVideo.onclick = () => domVideo.innerHTML = newHtmlVideo;
 
     choseOptions();
 

@@ -718,7 +718,7 @@ var Q = [{
   "level": "blau",
   "negre": "si",
   "tecnica": "gechio are maki",
-  "video": "pmtJV1w_Q0",
+  "video": "_pmtJV1w_Q0",
   "alt": "",
   "picture": "are-makki"
 }, {
@@ -1096,22 +1096,205 @@ var Q = [{
 exports.Q = Q;
 var _default = Q;
 exports.default = _default;
-},{}],"assets/are-makki.png":[function(require,module,exports) {
-module.exports = "/TKW/are-makki.c1e94bc1.png";
+},{}],"assets/2ceqGSwbm8M.png":[function(require,module,exports) {
+module.exports = "/TKW/2ceqGSwbm8M.5b0dcf20.png";
+},{}],"assets/3QRqe15zIKE.png":[function(require,module,exports) {
+module.exports = "/TKW/3QRqe15zIKE.fd1fc3a2.png";
+},{}],"assets/4igah7sddqQ.png":[function(require,module,exports) {
+module.exports = "/TKW/4igah7sddqQ.87a38912.png";
+},{}],"assets/524tqlcNlJk.png":[function(require,module,exports) {
+module.exports = "/TKW/524tqlcNlJk.ef21dd46.png";
+},{}],"assets/5dpFzb5eges.png":[function(require,module,exports) {
+module.exports = "/TKW/5dpFzb5eges.d54313a3.png";
+},{}],"assets/5fkuhw3ykeE.png":[function(require,module,exports) {
+module.exports = "/TKW/5fkuhw3ykeE.0098838a.png";
+},{}],"assets/5hEZJ_Y22e0.png":[function(require,module,exports) {
+module.exports = "/TKW/5hEZJ_Y22e0.64dbacab.png";
+},{}],"assets/7DtMO2tEMGs.png":[function(require,module,exports) {
+module.exports = "/TKW/7DtMO2tEMGs.2cc762b6.png";
+},{}],"assets/ArcCBvkyLA4.png":[function(require,module,exports) {
+module.exports = "/TKW/ArcCBvkyLA4.3f98022e.png";
+},{}],"assets/BY6J0w04cXQ.png":[function(require,module,exports) {
+module.exports = "/TKW/BY6J0w04cXQ.490358a6.png";
+},{}],"assets/C5rBfYD15p4.png":[function(require,module,exports) {
+module.exports = "/TKW/C5rBfYD15p4.31895372.png";
+},{}],"assets/DmnCfnC7qeM.png":[function(require,module,exports) {
+module.exports = "/TKW/DmnCfnC7qeM.c14f7478.png";
+},{}],"assets/DxDCg_6v9rE.png":[function(require,module,exports) {
+module.exports = "/TKW/DxDCg_6v9rE.4c9ac55a.png";
+},{}],"assets/FJHvYN50-K0.png":[function(require,module,exports) {
+module.exports = "/TKW/FJHvYN50-K0.7c16d7fa.png";
+},{}],"assets/FznywtUJlJ8.png":[function(require,module,exports) {
+module.exports = "/TKW/FznywtUJlJ8.af4aeb5f.png";
+},{}],"assets/G8KCx2g1nfs.png":[function(require,module,exports) {
+module.exports = "/TKW/G8KCx2g1nfs.c6db8696.png";
+},{}],"assets/GARSXnyJV0U.png":[function(require,module,exports) {
+module.exports = "/TKW/GARSXnyJV0U.0dea70e5.png";
+},{}],"assets/HaSC6PZzw0U.png":[function(require,module,exports) {
+module.exports = "/TKW/HaSC6PZzw0U.380a4c37.png";
+},{}],"assets/IQS3q3AhbWE.png":[function(require,module,exports) {
+module.exports = "/TKW/IQS3q3AhbWE.539a1713.png";
+},{}],"assets/IuvzhF7rfKk.png":[function(require,module,exports) {
+module.exports = "/TKW/IuvzhF7rfKk.6e838da2.png";
+},{}],"assets/Jdgnmr9enu8.png":[function(require,module,exports) {
+module.exports = "/TKW/Jdgnmr9enu8.d7324b8b.png";
+},{}],"assets/Jpst_GappfM.png":[function(require,module,exports) {
+module.exports = "/TKW/Jpst_GappfM.d8e5d41b.png";
+},{}],"assets/Lcs_rJEHvAw.png":[function(require,module,exports) {
+module.exports = "/TKW/Lcs_rJEHvAw.a9f0995f.png";
+},{}],"assets/MW-Pfo0CDMI.png":[function(require,module,exports) {
+module.exports = "/TKW/MW-Pfo0CDMI.100ec948.png";
+},{}],"assets/Mu6_Lui_ip4.png":[function(require,module,exports) {
+module.exports = "/TKW/Mu6_Lui_ip4.ed4daa8a.png";
+},{}],"assets/Selection_480.png":[function(require,module,exports) {
+module.exports = "/TKW/Selection_480.cae5119e.png";
+},{}],"assets/SpIJto5c7RM.png":[function(require,module,exports) {
+module.exports = "/TKW/SpIJto5c7RM.f2976e73.png";
+},{}],"assets/V6WI_u9WPJA.png":[function(require,module,exports) {
+module.exports = "/TKW/V6WI_u9WPJA.71a54752.png";
+},{}],"assets/WUPBPPUYWT0.png":[function(require,module,exports) {
+module.exports = "/TKW/WUPBPPUYWT0.90e49458.png";
+},{}],"assets/XFsQVojlQ58.png":[function(require,module,exports) {
+module.exports = "/TKW/XFsQVojlQ58.50034df2.png";
+},{}],"assets/YExkwhssI9k.png":[function(require,module,exports) {
+module.exports = "/TKW/YExkwhssI9k.fe1dd635.png";
+},{}],"assets/YjJmEHA62Ck.png":[function(require,module,exports) {
+module.exports = "/TKW/YjJmEHA62Ck.870708a3.png";
+},{}],"assets/Z9rnJ15KKCU.png":[function(require,module,exports) {
+module.exports = "/TKW/Z9rnJ15KKCU.7d2625d9.png";
+},{}],"assets/ZbOd9D6RdYw.png":[function(require,module,exports) {
+module.exports = "/TKW/ZbOd9D6RdYw.affa1366.png";
+},{}],"assets/_pmtJV1w_Q0.png":[function(require,module,exports) {
+module.exports = "/TKW/_pmtJV1w_Q0.421013d0.png";
+},{}],"assets/_vaC0DUpohg.png":[function(require,module,exports) {
+module.exports = "/TKW/_vaC0DUpohg.c15980c6.png";
+},{}],"assets/a1C56KYeL2E.png":[function(require,module,exports) {
+module.exports = "/TKW/a1C56KYeL2E.0470dc8d.png";
+},{}],"assets/aI-HSZCWGyc.png":[function(require,module,exports) {
+module.exports = "/TKW/aI-HSZCWGyc.95578bff.png";
+},{}],"assets/c0sDiHSDg0w.png":[function(require,module,exports) {
+module.exports = "/TKW/c0sDiHSDg0w.f889c21b.png";
+},{}],"assets/dYO7moC38vI.png":[function(require,module,exports) {
+module.exports = "/TKW/dYO7moC38vI.7f60ab88.png";
+},{}],"assets/e6UR_s0NWzI.png":[function(require,module,exports) {
+module.exports = "/TKW/e6UR_s0NWzI.b054b6ae.png";
+},{}],"assets/eLmvdSATImQ.png":[function(require,module,exports) {
+module.exports = "/TKW/eLmvdSATImQ.049ea4b6.png";
+},{}],"assets/ea7GPUMsm6w.png":[function(require,module,exports) {
+module.exports = "/TKW/ea7GPUMsm6w.9ecc4cf4.png";
+},{}],"assets/eb52M8MPbIM.png":[function(require,module,exports) {
+module.exports = "/TKW/eb52M8MPbIM.eb61f7b1.png";
+},{}],"assets/f0wssE3FkYQ.png":[function(require,module,exports) {
+module.exports = "/TKW/f0wssE3FkYQ.6a8617e8.png";
+},{}],"assets/gbsfs9E3NI0.png":[function(require,module,exports) {
+module.exports = "/TKW/gbsfs9E3NI0.556720e1.png";
 },{}],"assets/gm.png":[function(require,module,exports) {
 module.exports = "/TKW/gm.6ef19f89.png";
-},{}],"assets/montong-an-makki.png":[function(require,module,exports) {
-module.exports = "/TKW/montong-an-makki.4cb6432c.png";
-},{}],"assets/montong-makki.png":[function(require,module,exports) {
-module.exports = "/TKW/montong-makki.29057413.png";
+},{}],"assets/hWcDlF0r8DM.png":[function(require,module,exports) {
+module.exports = "/TKW/hWcDlF0r8DM.82cef343.png";
+},{}],"assets/iO-Py_LDQYM.png":[function(require,module,exports) {
+module.exports = "/TKW/iO-Py_LDQYM.86cf06ad.png";
+},{}],"assets/jDuPHXcKiXs.png":[function(require,module,exports) {
+module.exports = "/TKW/jDuPHXcKiXs.04a30f45.png";
+},{}],"assets/kenoYzX61zo.png":[function(require,module,exports) {
+module.exports = "/TKW/kenoYzX61zo.6c5b3b2b.png";
+},{}],"assets/l4KM6HRNB48.png":[function(require,module,exports) {
+module.exports = "/TKW/l4KM6HRNB48.374924df.png";
+},{}],"assets/m0eF69SfcPY.png":[function(require,module,exports) {
+module.exports = "/TKW/m0eF69SfcPY.9e0cc6b0.png";
+},{}],"assets/mVd6rud9Wjc.png":[function(require,module,exports) {
+module.exports = "/TKW/mVd6rud9Wjc.29d5c451.png";
+},{}],"assets/mY-lCnt12Ck.png":[function(require,module,exports) {
+module.exports = "/TKW/mY-lCnt12Ck.6a0a1bbf.png";
+},{}],"assets/nEe4xzKwHQo.png":[function(require,module,exports) {
+module.exports = "/TKW/nEe4xzKwHQo.1b9e8a97.png";
+},{}],"assets/uHZ6vmvikAc.png":[function(require,module,exports) {
+module.exports = "/TKW/uHZ6vmvikAc.3d579c36.png";
+},{}],"assets/vHFKx2jRcCU.png":[function(require,module,exports) {
+module.exports = "/TKW/vHFKx2jRcCU.3caf0a35.png";
+},{}],"assets/vYhSC67r93o.png":[function(require,module,exports) {
+module.exports = "/TKW/vYhSC67r93o.f696de86.png";
+},{}],"assets/wK_1zLUnwQY.png":[function(require,module,exports) {
+module.exports = "/TKW/wK_1zLUnwQY.10a568dc.png";
+},{}],"assets/y3nUBMaMIgw.png":[function(require,module,exports) {
+module.exports = "/TKW/y3nUBMaMIgw.df3a001f.png";
+},{}],"assets/zXnz75Wh308.png":[function(require,module,exports) {
+module.exports = "/TKW/zXnz75Wh308.b917f780.png";
+},{}],"assets/z_9Cv3DXcJU.png":[function(require,module,exports) {
+module.exports = "/TKW/z_9Cv3DXcJU.ecfcadea.png";
+},{}],"assets/zjiPglLsdOY.png":[function(require,module,exports) {
+module.exports = "/TKW/zjiPglLsdOY.eb9b6237.png";
+},{}],"assets/zwvB31_dC_k.png":[function(require,module,exports) {
+module.exports = "/TKW/zwvB31_dC_k.95a6e240.png";
 },{}],"assets/*.png":[function(require,module,exports) {
 module.exports = {
-  "are-makki": require("./are-makki.png"),
+  "2ceqGSwbm8M": require("./2ceqGSwbm8M.png"),
+  "3QRqe15zIKE": require("./3QRqe15zIKE.png"),
+  "4igah7sddqQ": require("./4igah7sddqQ.png"),
+  "524tqlcNlJk": require("./524tqlcNlJk.png"),
+  "5dpFzb5eges": require("./5dpFzb5eges.png"),
+  "5fkuhw3ykeE": require("./5fkuhw3ykeE.png"),
+  "5hEZJ_Y22e0": require("./5hEZJ_Y22e0.png"),
+  "7DtMO2tEMGs": require("./7DtMO2tEMGs.png"),
+  "ArcCBvkyLA4": require("./ArcCBvkyLA4.png"),
+  "BY6J0w04cXQ": require("./BY6J0w04cXQ.png"),
+  "C5rBfYD15p4": require("./C5rBfYD15p4.png"),
+  "DmnCfnC7qeM": require("./DmnCfnC7qeM.png"),
+  "DxDCg_6v9rE": require("./DxDCg_6v9rE.png"),
+  "FJHvYN50-K0": require("./FJHvYN50-K0.png"),
+  "FznywtUJlJ8": require("./FznywtUJlJ8.png"),
+  "G8KCx2g1nfs": require("./G8KCx2g1nfs.png"),
+  "GARSXnyJV0U": require("./GARSXnyJV0U.png"),
+  "HaSC6PZzw0U": require("./HaSC6PZzw0U.png"),
+  "IQS3q3AhbWE": require("./IQS3q3AhbWE.png"),
+  "IuvzhF7rfKk": require("./IuvzhF7rfKk.png"),
+  "Jdgnmr9enu8": require("./Jdgnmr9enu8.png"),
+  "Jpst_GappfM": require("./Jpst_GappfM.png"),
+  "Lcs_rJEHvAw": require("./Lcs_rJEHvAw.png"),
+  "MW-Pfo0CDMI": require("./MW-Pfo0CDMI.png"),
+  "Mu6_Lui_ip4": require("./Mu6_Lui_ip4.png"),
+  "Selection_480": require("./Selection_480.png"),
+  "SpIJto5c7RM": require("./SpIJto5c7RM.png"),
+  "V6WI_u9WPJA": require("./V6WI_u9WPJA.png"),
+  "WUPBPPUYWT0": require("./WUPBPPUYWT0.png"),
+  "XFsQVojlQ58": require("./XFsQVojlQ58.png"),
+  "YExkwhssI9k": require("./YExkwhssI9k.png"),
+  "YjJmEHA62Ck": require("./YjJmEHA62Ck.png"),
+  "Z9rnJ15KKCU": require("./Z9rnJ15KKCU.png"),
+  "ZbOd9D6RdYw": require("./ZbOd9D6RdYw.png"),
+  "_pmtJV1w_Q0": require("./_pmtJV1w_Q0.png"),
+  "_vaC0DUpohg": require("./_vaC0DUpohg.png"),
+  "a1C56KYeL2E": require("./a1C56KYeL2E.png"),
+  "aI-HSZCWGyc": require("./aI-HSZCWGyc.png"),
+  "c0sDiHSDg0w": require("./c0sDiHSDg0w.png"),
+  "dYO7moC38vI": require("./dYO7moC38vI.png"),
+  "e6UR_s0NWzI": require("./e6UR_s0NWzI.png"),
+  "eLmvdSATImQ": require("./eLmvdSATImQ.png"),
+  "ea7GPUMsm6w": require("./ea7GPUMsm6w.png"),
+  "eb52M8MPbIM": require("./eb52M8MPbIM.png"),
+  "f0wssE3FkYQ": require("./f0wssE3FkYQ.png"),
+  "gbsfs9E3NI0": require("./gbsfs9E3NI0.png"),
   "gm": require("./gm.png"),
-  "montong-an-makki": require("./montong-an-makki.png"),
-  "montong-makki": require("./montong-makki.png")
+  "hWcDlF0r8DM": require("./hWcDlF0r8DM.png"),
+  "iO-Py_LDQYM": require("./iO-Py_LDQYM.png"),
+  "jDuPHXcKiXs": require("./jDuPHXcKiXs.png"),
+  "kenoYzX61zo": require("./kenoYzX61zo.png"),
+  "l4KM6HRNB48": require("./l4KM6HRNB48.png"),
+  "m0eF69SfcPY": require("./m0eF69SfcPY.png"),
+  "mVd6rud9Wjc": require("./mVd6rud9Wjc.png"),
+  "mY-lCnt12Ck": require("./mY-lCnt12Ck.png"),
+  "nEe4xzKwHQo": require("./nEe4xzKwHQo.png"),
+  "uHZ6vmvikAc": require("./uHZ6vmvikAc.png"),
+  "vHFKx2jRcCU": require("./vHFKx2jRcCU.png"),
+  "vYhSC67r93o": require("./vYhSC67r93o.png"),
+  "wK_1zLUnwQY": require("./wK_1zLUnwQY.png"),
+  "y3nUBMaMIgw": require("./y3nUBMaMIgw.png"),
+  "zXnz75Wh308": require("./zXnz75Wh308.png"),
+  "z_9Cv3DXcJU": require("./z_9Cv3DXcJU.png"),
+  "zjiPglLsdOY": require("./zjiPglLsdOY.png"),
+  "zwvB31_dC_k": require("./zwvB31_dC_k.png")
 };
-},{"./are-makki.png":"assets/are-makki.png","./gm.png":"assets/gm.png","./montong-an-makki.png":"assets/montong-an-makki.png","./montong-makki.png":"assets/montong-makki.png"}],"main.js":[function(require,module,exports) {
+},{"./2ceqGSwbm8M.png":"assets/2ceqGSwbm8M.png","./3QRqe15zIKE.png":"assets/3QRqe15zIKE.png","./4igah7sddqQ.png":"assets/4igah7sddqQ.png","./524tqlcNlJk.png":"assets/524tqlcNlJk.png","./5dpFzb5eges.png":"assets/5dpFzb5eges.png","./5fkuhw3ykeE.png":"assets/5fkuhw3ykeE.png","./5hEZJ_Y22e0.png":"assets/5hEZJ_Y22e0.png","./7DtMO2tEMGs.png":"assets/7DtMO2tEMGs.png","./ArcCBvkyLA4.png":"assets/ArcCBvkyLA4.png","./BY6J0w04cXQ.png":"assets/BY6J0w04cXQ.png","./C5rBfYD15p4.png":"assets/C5rBfYD15p4.png","./DmnCfnC7qeM.png":"assets/DmnCfnC7qeM.png","./DxDCg_6v9rE.png":"assets/DxDCg_6v9rE.png","./FJHvYN50-K0.png":"assets/FJHvYN50-K0.png","./FznywtUJlJ8.png":"assets/FznywtUJlJ8.png","./G8KCx2g1nfs.png":"assets/G8KCx2g1nfs.png","./GARSXnyJV0U.png":"assets/GARSXnyJV0U.png","./HaSC6PZzw0U.png":"assets/HaSC6PZzw0U.png","./IQS3q3AhbWE.png":"assets/IQS3q3AhbWE.png","./IuvzhF7rfKk.png":"assets/IuvzhF7rfKk.png","./Jdgnmr9enu8.png":"assets/Jdgnmr9enu8.png","./Jpst_GappfM.png":"assets/Jpst_GappfM.png","./Lcs_rJEHvAw.png":"assets/Lcs_rJEHvAw.png","./MW-Pfo0CDMI.png":"assets/MW-Pfo0CDMI.png","./Mu6_Lui_ip4.png":"assets/Mu6_Lui_ip4.png","./Selection_480.png":"assets/Selection_480.png","./SpIJto5c7RM.png":"assets/SpIJto5c7RM.png","./V6WI_u9WPJA.png":"assets/V6WI_u9WPJA.png","./WUPBPPUYWT0.png":"assets/WUPBPPUYWT0.png","./XFsQVojlQ58.png":"assets/XFsQVojlQ58.png","./YExkwhssI9k.png":"assets/YExkwhssI9k.png","./YjJmEHA62Ck.png":"assets/YjJmEHA62Ck.png","./Z9rnJ15KKCU.png":"assets/Z9rnJ15KKCU.png","./ZbOd9D6RdYw.png":"assets/ZbOd9D6RdYw.png","./_pmtJV1w_Q0.png":"assets/_pmtJV1w_Q0.png","./_vaC0DUpohg.png":"assets/_vaC0DUpohg.png","./a1C56KYeL2E.png":"assets/a1C56KYeL2E.png","./aI-HSZCWGyc.png":"assets/aI-HSZCWGyc.png","./c0sDiHSDg0w.png":"assets/c0sDiHSDg0w.png","./dYO7moC38vI.png":"assets/dYO7moC38vI.png","./e6UR_s0NWzI.png":"assets/e6UR_s0NWzI.png","./eLmvdSATImQ.png":"assets/eLmvdSATImQ.png","./ea7GPUMsm6w.png":"assets/ea7GPUMsm6w.png","./eb52M8MPbIM.png":"assets/eb52M8MPbIM.png","./f0wssE3FkYQ.png":"assets/f0wssE3FkYQ.png","./gbsfs9E3NI0.png":"assets/gbsfs9E3NI0.png","./gm.png":"assets/gm.png","./hWcDlF0r8DM.png":"assets/hWcDlF0r8DM.png","./iO-Py_LDQYM.png":"assets/iO-Py_LDQYM.png","./jDuPHXcKiXs.png":"assets/jDuPHXcKiXs.png","./kenoYzX61zo.png":"assets/kenoYzX61zo.png","./l4KM6HRNB48.png":"assets/l4KM6HRNB48.png","./m0eF69SfcPY.png":"assets/m0eF69SfcPY.png","./mVd6rud9Wjc.png":"assets/mVd6rud9Wjc.png","./mY-lCnt12Ck.png":"assets/mY-lCnt12Ck.png","./nEe4xzKwHQo.png":"assets/nEe4xzKwHQo.png","./uHZ6vmvikAc.png":"assets/uHZ6vmvikAc.png","./vHFKx2jRcCU.png":"assets/vHFKx2jRcCU.png","./vYhSC67r93o.png":"assets/vYhSC67r93o.png","./wK_1zLUnwQY.png":"assets/wK_1zLUnwQY.png","./y3nUBMaMIgw.png":"assets/y3nUBMaMIgw.png","./zXnz75Wh308.png":"assets/zXnz75Wh308.png","./z_9Cv3DXcJU.png":"assets/z_9Cv3DXcJU.png","./zjiPglLsdOY.png":"assets/zjiPglLsdOY.png","./zwvB31_dC_k.png":"assets/zwvB31_dC_k.png"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _vanillaSharing = require("vanilla-sharing");
@@ -1126,8 +1309,9 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var images = require('./assets/*.png');
 
-var htmlVideo = "\n<div class=\"embed-responsive embed-responsive-16by9 play-video\">\n<iframe class=\"play-video\" id=\"video\" width=\"420\" height=\"315\"\n        src=\"https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1\" >\n</iframe>\n</div>\n<div ><h6 style=\"color: gray; font-size: 50%;\" id=\"video-codi\">XXXXX</h6></div>\n";
-var htmlLoading = "\n<div id=\"picture-div\" class=\"col-12 col-lg-6\">\n<div>Loading</div>\n<img id=\"picture\" class=\"img-fluid\" />\n</div>\n";
+var htmlVideo = "\n<div class=\"embed-responsive embed-responsive-16by9 play-video\">\n<iframe class=\"play-video\" id=\"video\" width=\"420\" height=\"315\"\n        src=\"https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1\" >\n</iframe>\n</div>\n<div >\n<h6 style=\"color: gray; font-size: 50%;\" id=\"video-codi\">XXXXX</h6></div>\n";
+var htmlImage = "\n<div id=\"picture-div\" class=\"col-12\">\n    <img id=\"picture\" style=\"cursor:pointer;\" class=\"img-fluid\" src=\"XXXXX\" />\n    <h1 style=\"position: absolute;bottom: 45%;left: 45%;color: #F00000;\"><i class=\"far fa-play-circle\"></i></h1>\n</div>\n<h6 style=\"color: gray; font-size: 50%;\" id=\"video-codi\">XXXXX</h6></div>\n";
+var htmlLoading = "\n<div id=\"picture-div\" class=\"col-12\">\n<div>Loading</div>\n<img id=\"picture\" class=\"img-fluid\" />\n</div>\n";
 
 function initialize() {
   var _loop = function _loop(i) {
@@ -1206,7 +1390,13 @@ function starttest() {
   var domVideo = document.getElementById("video-div");
   domVideo.innerHTML = htmlLoading;
   var newHtmlVideo = htmlVideo.replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video).replace("XXXXX", t.currentItem.video);
-  domVideo.innerHTML = newHtmlVideo;
+  var newHtmlImage = htmlImage.replace("XXXXX", t.currentItem.video).replace("XXXXX", images[t.currentItem.video]);
+  domVideo.innerHTML = newHtmlImage;
+
+  domVideo.onclick = function () {
+    return domVideo.innerHTML = newHtmlVideo;
+  };
+
   choseOptions();
 }
 
@@ -1280,7 +1470,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39943" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34131" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

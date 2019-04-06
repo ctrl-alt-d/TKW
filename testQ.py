@@ -9,7 +9,7 @@ Q =[
  { "level":"verd", "negre":"si", "tecnica":"jansonnal montong bakat maki", "video":"vYhSC67r93o", "alt": "", "picture": "are-makki" },
  { "level":"verd", "negre":"si", "tecnica":"nulo maki", "video":"hWcDlF0r8DM", "alt": "", "picture": "are-makki" },
  { "level":"blau", "negre":"si", "tecnica":"olgul bakat maki", "video":"IuvzhF7rfKk", "alt": "", "picture": "are-makki" },
- { "level":"blau", "negre":"si", "tecnica":"gechio are maki", "video":"pmtJV1w_Q0", "alt": "", "picture": "are-makki" },
+ { "level":"blau", "negre":"si", "tecnica":"gechio are maki", "video":"_pmtJV1w_Q0", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"batagson montong an maki", "video":"dYO7moC38vI", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"sonnal are maki", "video":"V6WI_u9WPJA", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"goduro batagson montong an maki", "video":"uHZ6vmvikAc", "alt": "", "picture": "are-makki" },
