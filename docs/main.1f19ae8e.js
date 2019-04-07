@@ -745,7 +745,7 @@ var Q = [{
 }, {
   "level": "marró",
   "negre": "si",
-  "tecnica": "gehio montong maki",
+  "tecnica": "gechio montong maki",
   "video": "f0wssE3FkYQ",
   "alt": "",
   "picture": "are-makki"
@@ -1311,7 +1311,7 @@ var images = require('./assets/*.png');
 
 var htmlVideo = "\n<div class=\"embed-responsive embed-responsive-16by9 play-video\">\n<iframe class=\"play-video\" id=\"video\" width=\"420\" height=\"315\"\n        src=\"https://www.youtube.com/embed/XXXXX?autoplay=1&mute=1&playlist=XXXXX&loop=1\" >\n</iframe>\n</div>\n<div >\n<h6 style=\"color: gray; font-size: 50%;\" id=\"video-codi\">XXXXX</h6></div>\n";
 var htmlImage = "\n<div id=\"picture-div\" class=\"col-12\">\n    <img id=\"picture\" style=\"cursor:pointer;\" class=\"img-fluid\" src=\"XXXXX\" />\n    <h1 style=\"position: absolute;bottom: 45%;left: 45%;color: #F00000;\"><i class=\"far fa-play-circle\"></i></h1>\n</div>\n<h6 style=\"color: gray; font-size: 50%;\" id=\"video-codi\">XXXXX</h6></div>\n";
-var htmlLoading = "\n<div id=\"picture-div\" class=\"col-12\">\n<div>Loading</div>\n<img id=\"picture\" class=\"img-fluid\" />\n</div>\n";
+var htmlLoading = "\n<div id=\"picture-div\" class=\"col-12\">\n<div>Loading</div>\n<img id=\"picture\" class=\"img-fluid\"  height=\"400px\" width=\"600\" />\n</div>\n";
 
 function initialize() {
   var _loop = function _loop(i) {
@@ -1470,7 +1470,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32851" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

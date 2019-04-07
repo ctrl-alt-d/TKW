@@ -26,7 +26,7 @@ const htmlImage = `
 const htmlLoading = `
 <div id="picture-div" class="col-12">
 <div>Loading</div>
-<img id="picture" class="img-fluid" />
+<img id="picture" class="img-fluid"  height="400px" width="600" />
 </div>
 `
 

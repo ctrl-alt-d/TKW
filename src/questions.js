@@ -13,7 +13,7 @@ export const Q = [
  { "level":"marró", "negre":"si", "tecnica":"batagson montong an maki", "video":"dYO7moC38vI", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"sonnal are maki", "video":"V6WI_u9WPJA", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"goduro batagson montong an maki", "video":"uHZ6vmvikAc", "alt": "", "picture": "are-makki" },
- { "level":"marró", "negre":"si", "tecnica":"gehio montong maki", "video":"f0wssE3FkYQ", "alt": "", "picture": "are-makki" },
+ { "level":"marró", "negre":"si", "tecnica":"gechio montong maki", "video":"f0wssE3FkYQ", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"okgoro are maki", "video":"mVd6rud9Wjc", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"jansonnal montong yop maki", "video":"Lcs_rJEHvAw", "alt": "", "picture": "are-makki" },
  { "level":"negre", "negre":"si", "tecnica":"goduro montong maki", "video":"jDuPHXcKiXs", "alt": "", "picture": "are-makki" },
