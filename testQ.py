@@ -32,7 +32,7 @@ Q =[
  { "level":"verd", "negre":"si", "tecnica":"chebipum mok chigui", "video":"_vaC0DUpohg", "alt": "", "picture": "are-makki" },
  { "level":"blau", "negre":"si", "tecnica":"montong piochok palkup chigui", "video":"WUPBPPUYWT0", "alt": "palkup montong piochok chigui", "picture": "are-makki" },
  { "level":"blau", "negre":"si", "tecnica":"bituro jansonnal olgul bakat maki", "video":"2ceqGSwbm8M", "alt": "", "picture": "are-makki" },
- { "level":"marro", "negre":"si", "tecnica":"gawi maki", "video":"zjiPglLsdOY", "alt": "", "picture": "are-makki" },
+ { "level":"marró", "negre":"si", "tecnica":"gawi maki", "video":"zjiPglLsdOY", "alt": "", "picture": "are-makki" },
  { "level":"marró", "negre":"si", "tecnica":"dangkiok ollyo murup chigui", "video":"4igah7sddqQ", "alt": "", "picture": "are-makki" },
  { "level":"negre", "negre":"si", "tecnica":"oe santul maki", "video":"c0sDiHSDg0w", "alt": "", "picture": "are-makki" },
  { "level":"negre", "negre":"si", "tecnica":"dangkiok tok jirugui", "video":"ZbOd9D6RdYw", "alt": "", "picture": "are-makki" },
