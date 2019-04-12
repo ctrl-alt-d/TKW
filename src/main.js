@@ -1,9 +1,11 @@
 import { fbButton } from 'vanilla-sharing';
 import * as t from "./alltecniques";
 import Q from "./questions";
+
+/*  --firebase--
 import * as firebase from "firebase/app";
 import "firebase/database";
-
+*/
 
 
 const images = require('./assets/*.png');
@@ -73,6 +75,7 @@ function initialize()
     //
     document.getElementById("about-btn").onclick= () =>
     { 
+        /*  --firebase--
         let olRanking = document.getElementById("ranking-ol");
         olRanking.innerHTML="Carregant ....";
         let queryRef = firebase.database().ref('/all').orderByChild('punts').limitToLast(10);
@@ -95,12 +98,14 @@ function initialize()
                 prevli=li;
             });
         });
+        */
     }
 
 
     //
     $("#modal-level").modal("show");   
     
+    /*  --firebase--
     var firebaseConfig = {
         apiKey: "AIzaSyB49K0RxNlMvHMPu5N5g3IOLE9NWusZX-0",
         authDomain: "tkdtest-89370.firebaseapp.com",
@@ -112,7 +117,7 @@ function initialize()
        
        // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
+    */
 }
 
 
@@ -180,13 +185,14 @@ function testpressed()
 
 function showreview(correct)
 {
+    /*  --firebase--
     var database = firebase.database();
     var nick = document.getElementById("nick").value.split("/").join("").split(" ").join("_");
     var nickRef = database.ref('/all/'+ nick );
     var obj = {punts: t.score };
     nickRef.push(obj);   
     nickRef.set(obj); 
-
+    */
 
     let answerok = document.getElementById("answer-ok");
     answerok.textContent = t.currentItem.tecnica;
