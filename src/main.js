@@ -1,6 +1,9 @@
 import { fbButton } from 'vanilla-sharing';
 import * as t from "./alltecniques";
 import Q from "./questions";
+import * as firebase from "firebase/app";
+import "firebase/database";
+
 
 
 const images = require('./assets/*.png');
@@ -29,6 +32,8 @@ const htmlLoading = `
 <img id="picture" class="img-fluid"  height="400px" width="600" />
 </div>
 `
+
+let recordAll = 0;
 
 function initialize()
 {
@@ -66,7 +71,47 @@ function initialize()
     }
 
     //
-    $("#modal-level").modal("show");             
+    document.getElementById("about-btn").onclick= () =>
+    { 
+        let olRanking = document.getElementById("ranking-ol");
+        olRanking.innerHTML="Carregant ....";
+        let queryRef = firebase.database().ref('/all').orderByChild('punts').limitToLast(10);
+    
+        queryRef.once("value").then( snapshot => 
+        {
+          olRanking.innerHTML="";
+          let prevli = null;
+          snapshot.forEach( childSnapshot => 
+            {
+                let nick = childSnapshot.key;
+                let punts = childSnapshot.val();
+                let li = document.createElement("li");
+                li.appendChild(document.createTextNode(punts.punts + " - " + nick));
+                if (prevli == null)
+                    olRanking.appendChild(li);
+                else{
+                    olRanking.insertBefore(li, prevli );
+                }
+                prevli=li;
+            });
+        });
+    }
+
+
+    //
+    $("#modal-level").modal("show");   
+    
+    var firebaseConfig = {
+        apiKey: "AIzaSyB49K0RxNlMvHMPu5N5g3IOLE9NWusZX-0",
+        authDomain: "tkdtest-89370.firebaseapp.com",
+        databaseURL: "https://tkdtest-89370.firebaseio.com",
+        projectId: "tkdtest-89370",
+        storageBucket: "tkdtest-89370.appspot.com",
+        messagingSenderId: "155292488049"
+      };
+       
+       // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
 }
 
@@ -135,6 +180,13 @@ function testpressed()
 
 function showreview(correct)
 {
+    var database = firebase.database();
+    var nick = document.getElementById("nick").value.split("/").join("").split(" ").join("_");
+    var nickRef = database.ref('/all/'+ nick );
+    var obj = {punts: t.score };
+    nickRef.push(obj);   
+    nickRef.set(obj); 
+
 
     let answerok = document.getElementById("answer-ok");
     answerok.textContent = t.currentItem.tecnica;
@@ -158,6 +210,7 @@ function reviewpressed()
 
 function setlevel(l)
 {
+
     t.massageQuestionsClass(l,Q);
     //
     let domscore = document.getElementById("score");

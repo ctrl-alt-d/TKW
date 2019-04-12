@@ -98,7 +98,14 @@
                             <div class="text-center">
                                 <img src="./assets/gm.png" />
                             </div>
-
+                            <div class="col-lg6 col-12 text-center mt-4">
+                                <div class="form-group">
+                                    <label for="nick">El teu nick:</label>
+                                    <input style="text-align: center;" class="form-control w-100" type="text" maxlength="10" id="nick" value="chumcumsogui" />
+                                    <small id="emailHelp" class="form-text text-muted">No cal que posis el teu nom real.</small>
+                                </div>                                
+                            </div>
+                            
                             <div class="modal-body">
 
                                     <div class="btn-group w-100 mt-4 d-flex" role="group" aria-label="level">
@@ -128,9 +135,9 @@
             </div>
 
             <!-- MODALS About-->
-            <div class="col-12 offset-lg-3 col-lg-6"></div>
+            <div class="col-12 offset-lg-3 col-lg-6">
                 <button class="btn btn-sm w-100" style="font-family: 'Merienda One', cursive;"
-                        data-toggle="modal" data-target="#modal-gm"
+                        data-toggle="modal" data-target="#modal-gm" id="about-btn"
                 >
                     <i class="fas fa-hand-rock"></i> GYM MASTER <i class="fas fa-hand-rock"></i>
                 </button>
@@ -152,20 +159,22 @@
                                 <p style="font-family: 'Merienda One', cursive;">~ escola d'arts marcials ~</p>
                             </div>
                         </div>
+                        <div id="ranking-div">
+                            <ul id="ranking-ol">
+
+                            </ul>
+                        </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">OK!</button>
                         </div>
                       </div>
                     </div>
                 </div>
-
-
             </div>
             
         </div>
     </div>
     
-
     <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
