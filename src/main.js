@@ -49,6 +49,9 @@ function initialize()
         option.onclick = ()=>answerpressed(i);
     }
 
+    //
+    $("#modal-level").modal("show");   
+
     //test event
     let test = document.getElementById("test");
     test.onclick = ()=>testpressed();
@@ -99,11 +102,7 @@ function initialize()
                 prevli=li;
             });
         });
-    }
-
-
-    //
-    $("#modal-level").modal("show");   
+    };
     
     var firebaseConfig = {
         apiKey: "AIzaSyB49K0RxNlMvHMPu5N5g3IOLE9NWusZX-0",
