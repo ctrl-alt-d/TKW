@@ -3,12 +3,18 @@ let alltecniques = [];
 let previousTechnique = "";
 let MyQ = [];
 
+export let randomNick = "aliga groga";
 export let currentWord = 0;
 export let currentItem = null;
 export let currentOptions = [];
 export let score = 0;
 export let level = 0;
 export let levelsNames = ["Groc", "Taronja", "Verd", "Blau", "Marró", "Negre"];
+export function newRandomNick(q) {
+    let power = ["mega crack", "master", "ninja"];
+    let all_names = q.map(x=>x.tecnica);
+    randomNick= all_names[Math.floor(Math.random() * all_names.length)] + " " + power[Math.floor(Math.random() * power.length)];
+}
 export function resetCurrentWord() {
     currentWord=0;
 }

@@ -37,6 +37,10 @@ let recordAll = 0;
 
 function initialize()
 {
+    //nick
+    let nickDom=document.getElementById("nick");    
+    t.newRandomNick(Q);
+    nickDom.setAttribute("placeholder", t.randomNick);
 
     //options events
     for (let i=0;i<5;i++)
@@ -180,10 +184,9 @@ function testpressed()
 function showreview(correct)
 {
     var database = firebase.database();
-    var nick = document.getElementById("nick").value.split("/").join("").split(" ").join("_");
+    var nick = document.getElementById("nick").value.split("/").join("");
     var nickRef = database.ref('/all/'+ nick );
     var obj = {punts: t.score };
-    nickRef.push(obj);   
     nickRef.set(obj); 
 
     let answerok = document.getElementById("answer-ok");
@@ -208,6 +211,9 @@ function reviewpressed()
 
 function setlevel(l)
 {
+    // nick
+    var nick = document.getElementById("nick").value.split("/").join("");
+    if (nick == "") document.getElementById("nick").value = t.randomNick;
 
     t.massageQuestionsClass(l,Q);
     //

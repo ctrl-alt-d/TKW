@@ -497,6 +497,7 @@ function line() {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.newRandomNick = newRandomNick;
 exports.resetCurrentWord = resetCurrentWord;
 exports.increasseCurrentWord = increasseCurrentWord;
 exports.getItemClass = getItemClass;
@@ -504,10 +505,12 @@ exports.levelNameClass = levelNameClass;
 exports.massageQuestionsClass = massageQuestionsClass;
 exports.checkCorrectClass = checkCorrectClass;
 exports.choseOptionsClass = choseOptionsClass;
-exports.levelsNames = exports.level = exports.score = exports.currentOptions = exports.currentItem = exports.currentWord = void 0;
+exports.levelsNames = exports.level = exports.score = exports.currentOptions = exports.currentItem = exports.currentWord = exports.randomNick = void 0;
 var alltecniques = [];
 var previousTechnique = "";
 var MyQ = [];
+var randomNick = "aliga groga";
+exports.randomNick = randomNick;
 var currentWord = 0;
 exports.currentWord = currentWord;
 var currentItem = null;
@@ -520,6 +523,14 @@ var level = 0;
 exports.level = level;
 var levelsNames = ["Groc", "Taronja", "Verd", "Blau", "Marró", "Negre"];
 exports.levelsNames = levelsNames;
+
+function newRandomNick(q) {
+  var power = ["mega crack", "master", "ninja"];
+  var all_names = q.map(function (x) {
+    return x.tecnica;
+  });
+  exports.randomNick = randomNick = all_names[Math.floor(Math.random() * all_names.length)] + " " + power[Math.floor(Math.random() * power.length)];
+}
 
 function resetCurrentWord() {
   exports.currentWord = currentWord = 0;
@@ -22594,6 +22605,11 @@ var htmlLoading = "\n<div id=\"picture-div\" class=\"col-12\">\n<div>Loading</di
 var recordAll = 0;
 
 function initialize() {
+  //nick
+  var nickDom = document.getElementById("nick");
+  t.newRandomNick(_questions.default);
+  nickDom.setAttribute("placeholder", t.randomNick); //options events
+
   var _loop = function _loop(i) {
     var option = document.getElementById("a" + i);
 
@@ -22602,7 +22618,6 @@ function initialize() {
     };
   };
 
-  //options events
   for (var i = 0; i < 5; i++) {
     _loop(i);
   } //test event
@@ -22729,12 +22744,11 @@ function testpressed() {
 
 function showreview(correct) {
   var database = firebase.database();
-  var nick = document.getElementById("nick").value.split("/").join("").split(" ").join("_");
+  var nick = document.getElementById("nick").value.split("/").join("");
   var nickRef = database.ref('/all/' + nick);
   var obj = {
     punts: t.score
   };
-  nickRef.push(obj);
   nickRef.set(obj);
   var answerok = document.getElementById("answer-ok");
   answerok.textContent = t.currentItem.tecnica;
@@ -22753,6 +22767,9 @@ function reviewpressed() {
 }
 
 function setlevel(l) {
+  // nick
+  var nick = document.getElementById("nick").value.split("/").join("");
+  if (nick == "") document.getElementById("nick").value = t.randomNick;
   t.massageQuestionsClass(l, _questions.default); //
 
   var domscore = document.getElementById("score");
@@ -22789,7 +22806,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36371" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43913" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
